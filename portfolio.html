@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:title" content="Portfolio | Zhyrr Designs">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="assets/images/512xnewhypixel.png" type="image/x-icon">
+  <meta name="description" content="Portfolio of custom Minecraft worlds, terrain, and environment designed by Zhyrr.">
+
+  <title>Portfolio | Zhyrr Designs</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Fredoka+One:400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One:400&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+
+<style>
+
+    .card.mb-3 {
+  padding: 0px 1rem;
+}
+  /* ===== Page tone ===== */
+  body { background-color: rgb(1, 17, 26); }
+
+  /* ===== Hero tweaks ===== */
+  .hero-subtext {
+    color: rgba(255,255,255,0.85);
+    line-height: 1.8;
+  }
+
+  /* ===== Portfolio grid ===== */
+  #portfolio-grid {
+    background-color: rgb(1, 17, 26);
+    padding: 4.5rem 0;
+  }
+
+  .port-card {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(10, 16, 22, 0.70);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    height: 100%;
+  }
+
+  .port-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 80px rgba(0,0,0,0.60);
+    border-color: rgba(255,255,255,0.18);
+  }
+
+  .port-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    background: rgba(1, 17, 26, 1);
+  }
+
+  .port-body {
+    padding: 1.2rem 1.3rem 1.35rem;
+  }
+
+  .port-title {
+    color: #fff;
+    margin: 0 0 0.35rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .port-desc {
+    color: rgba(255,255,255,0.72);
+    margin: 0 0 0.85rem;
+    line-height: 1.6;
+    font-size: 0.98rem;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .tag {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.75);
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(1, 17, 26, 0.65);
+    padding: 6px 10px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .port-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  /* ===== Simple highlight strip ===== */
+  #cred-strip {
+    padding: 3.5rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  #cred-strip::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.25);
+    z-index:0;
+  }
+  #cred-strip .container{ position:relative; z-index:1; }
+
+  .cred-card{
+    max-width: 980px;
+    margin: 0 auto;
+    border-radius: 22px;
+    padding: 2.2rem 2.2rem;
+    background: rgba(10,16,22,0.70);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.10);
+    box-shadow: 0 26px 70px rgba(0,0,0,0.55);
+  }
+
+  .cred-title{
+    font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color:#fff;
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    margin: 0 0 0.85rem;
+    text-align:center;
+  }
+
+  .cred-text{
+    color: rgba(255,255,255,0.86);
+    line-height: 1.85;
+    margin: 0;
+    text-align:center;
+  }
+
+  /* ===== Mini FAQ ===== */
+  #mini-faq {
+    background-color: rgb(1, 17, 26);
+    padding: 4.5rem 0;
+  }
+  #mini-faq .card {
+    background: rgba(10,16,22,0.70);
+    border: 1px solid rgba(255,255,255,0.10);
+  }
+  #mini-faq .panel-text,
+  #mini-faq .panel-title-edit,
+  #mini-faq .mbr-iconfont,
+  #mini-faq strong {
+    color: #fff !important;
+  }
+  #mini-faq .panel-text {
+    color: rgba(255,255,255,0.80) !important;
+  }
+
+  /* Better mobile spacing */
+  @media (max-width: 768px){
+    .cred-card{ padding: 1.8rem 1.4rem; }
+  }
+
+  /* ===== Portfolio Category Grid ===== */
+  #portfolio-cats {
+    background-color: rgb(1, 17, 26);
+    padding: 4.5rem 0;
+  }
+
+  .cat-card {
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(10, 16, 22, 0.70);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  .cat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 80px rgba(0,0,0,0.60);
+    border-color: rgba(255,255,255,0.18);
+  }
+
+  .cat-thumb {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    background: rgba(1, 17, 26, 1);
+  }
+
+  .cat-body {
+    padding: 1.1rem 1.2rem 1.2rem;
+  }
+
+  .cat-title {
+    color: #fff;
+    margin: 0 0 0.35rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+  .cat-desc {
+    color: rgba(255,255,255,0.72);
+    margin: 0;
+    line-height: 1.55;
+    font-size: 0.98rem;
+  }
+
+  .cat-hint {
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* ===== Modal Gallery ===== */
+  .modal-content {
+    background: rgba(10, 16, 22, 0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .modal-title {
+    color: #fff;
+    font-weight: 800;
+  }
+
+  .modal .btn-close {
+    filter: invert(1);
+    opacity: 0.85;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 12px;
+  }
+
+  .gallery-item {
+    grid-column: span 6;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.10);
+    background: rgba(1,17,26,0.65);
+  }
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+    opacity: 0.95;
+  }
+
+  .gallery-item:hover img {
+    transform: scale(1.03);
+    opacity: 1;
+  }
+
+  /* Larger “hero” image inside modal */
+  .gallery-hero {
+    grid-column: span 12;
+  }
+
+  .gallery-hero img {
+    aspect-ratio: 21 / 9;
+  }
+
+  @media (max-width: 992px) {
+    .gallery-item { grid-column: span 12; }
+    .gallery-hero img { aspect-ratio: 16 / 9; }
+  }
+
+</style>
+
+</head>
+<body>
+
+<!-- ===== NAV (matches your site structure) ===== -->
+<section data-bs-version="5.1" class="menu menu2 cid-tkbL8n4vab" once="menu" id="menu2-16">
+  <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+      <div class="container-fluid">
+          <div class="navbar-brand">
+              <span class="navbar-logo">
+                  <a href="#">
+                      <img src="assets/images/512xnewhypixel.png" alt="" style="height: 3rem;">
+                  </a>
+              </span>
+              <span class="navbar-caption-wrap">
+                <a class="navbar-caption text-white display-7" href="#">Zhyrr Designs</a>
+              </span>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <div class="hamburger">
+                  <span></span><span></span><span></span><span></span>
+              </div>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                <li class="nav-item">
+                  <a class="nav-link link text-white text-primary display-4" href="index.html#features13-2">My Survival Worlds</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link text-white text-primary display-4" href="index.html#features24-4">How to play</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link text-white text-primary display-4" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link link text-white text-primary display-4" href="tos.html">TOS</a>
+                </li>
+              </ul>
+
+              <div class="navbar-buttons mbr-section-btn">
+                <a class="btn btn-primary display-4" href="https://www.patreon.com/ZhyrrDesigns" target="_blank">
+                  <span class="mobi-mbri mobi-mbri-shopping-basket mbr-iconfont mbr-iconfont-btn"></span>
+                  Play Here!&nbsp;
+                </a>
+              </div>
+          </div>
+      </div>
+  </nav>
+</section>
+
+<!-- ===== HERO ===== -->
+<section data-bs-version="5.1" class="header14 cid-tjqpRpO1sc mbr-fullscreen mbr-parallax-background" id="header14-portfolio">
+  <div class="mbr-overlay" style="opacity: 0.82; background-color: rgb(1, 17, 26);"></div>
+
+  <div class="container">
+      <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-md-6 image-wrapper">
+              <img src="assets/images/512xnewhypixel.png" alt="">
+          </div>
+          <div class="col-12 col-md">
+              <div class="text-wrapper">
+                  <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1">
+                    <strong>Portfolio</strong>
+                  </h1>
+
+                  <p class="mbr-text mbr-fonts-style display-7 hero-subtext">
+                    A collection of my custom Minecraft worlds, terrain work, and environment design.
+                    I focus on handcrafted landscapes that feel natural, play well in survival, and stay interesting long-term.
+                    <br><br>
+                    Want to see more? Or if you need a world made specifically for your server or project, Join the discord server!
+                  </p>
+
+                  <div class="mbr-section-btn mt-3">
+                      <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
+                        Join Discord Server
+                      </a>
+                      <a class="btn btn-info-outline display-4" href="https://www.patreon.com/ZhyrrDesigns" target="_blank">
+                        Play the World &gt;
+                      </a>
+                  </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- ===== HIGHLIGHT / CREDENTIAL STRIP ===== -->
+<section data-bs-version="5.1" class="content7 cid-tjqfrB7rtr mbr-parallax-background" id="cred-strip">
+  <div class="mbr-overlay" style="opacity: 0.25; background-color: rgb(1, 17, 26);"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="cred-card">
+          <div class="cred-title">What I create</div>
+          <p class="cred-text mbr-fonts-style display-4">
+            Handcrafted terrain, biome composition, coastlines and oceans, caves, and survival-focused world flow.
+            With nearly 10 years of experience and 500+ worlds built for servers, friend groups, and the Minecraft Marketplace,
+            I design maps that are meant to be played. Not just showcased!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" id="portfolio-cats">
+  <div class="container">
+
+    <div class="row justify-content-center mb-4">
+      <div class="col-12 col-lg-8 text-center">
+        <h2 class="mbr-fonts-style display-2 text-primary mb-2 portfolio-title">
+  <strong>Portfolio</strong>
+</h2>
+        <p class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.72);">
+          Click a category to expand it and browse more images in that niche.
+        </p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Overviews -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="cat-card" role="button"
+             data-bs-toggle="modal" data-bs-target="#portfolioModal"
+             data-cat="Overviews"
+             data-desc="Wide shots that show scale, flow, and the overall shape of the world."
+             data-images="assets/images/showcase/overviews/1.jpeg,
+                          assets/images/showcase/overviews/2.jpeg,
+                          assets/images/showcase/overviews/3.jpeg,
+                          assets/images/showcase/overviews/4.jpeg,
+                          assets/images/showcase/overviews/5.jpeg,
+                          assets/images/showcase/overviews/6.jpeg,
+                          assets/images/showcase/overviews/7.jpeg,
+                          assets/images/showcase/overviews/8.jpeg,
+                          assets/images/showcase/overviews/9.jpeg,
+                          assets/images/showcase/overviews/10.jpeg,
+                          assets/images/showcase/overviews/11.jpeg">
+          <img class="cat-thumb" src="assets/images/showcase/overviews/2.jpeg" alt="Overviews">
+          <div class="cat-body">
+            <div class="cat-title">Overviews</div>
+            <div class="cat-desc">Big-picture landscapes of the world scale.</div>
+            <div class="cat-hint">Click to expand →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Biomes -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="cat-card" role="button"
+             data-bs-toggle="modal" data-bs-target="#portfolioModal"
+             data-cat="Biomes"
+             data-desc="Biome composition, transitions, density, and natural variety."
+             data-images="assets/images/showcase/biomes/1.jpeg,
+                          assets/images/showcase/biomes/2.jpeg,
+                          assets/images/showcase/biomes/3.jpeg,
+                          assets/images/showcase/biomes/4.jpeg,
+                          assets/images/showcase/biomes/5.jpeg,
+                          assets/images/showcase/biomes/6.jpeg,
+                          assets/images/showcase/biomes/7.jpeg,
+                          assets/images/showcase/biomes/8.jpeg,
+                          assets/images/showcase/biomes/9.jpeg,
+                          assets/images/showcase/biomes/10.jpeg">
+          <img class="cat-thumb" src="assets/images/showcase/biomes/2.jpeg" alt="Biomes">
+          <div class="cat-body">
+            <div class="cat-title">Biomes</div>
+            <div class="cat-desc">Feel the atmospehre of custom Biomes.</div>
+            <div class="cat-hint">Click to expand →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oceans -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="cat-card" role="button"
+             data-bs-toggle="modal" data-bs-target="#portfolioModal"
+             data-cat="Oceans"
+             data-desc="Coastlines, beaches, and oceans shaped for exploration and realism."
+             data-images="assets/images/showcase/oceans/1.jpeg,
+                          assets/images/showcase/oceans/2.jpeg,
+                          assets/images/showcase/oceans/3.jpeg,
+                          assets/images/showcase/oceans/4.jpeg,
+                          assets/images/showcase/oceans/5.jpeg,
+                          assets/images/showcase/oceans/6.jpeg,
+                          assets/images/showcase/oceans/7.jpeg,
+                          assets/images/showcase/oceans/8.jpeg,
+                          assets/images/showcase/oceans/9.jpeg,
+                          assets/images/showcase/oceans/10.jpeg,
+                          assets/images/showcase/oceans/11.jpeg">
+          <img class="cat-thumb" src="assets/images/showcase/oceans/3.jpeg" alt="Oceans">
+          <div class="cat-body">
+            <div class="cat-title">Oceans</div>
+            <div class="cat-desc">Hand-crafted shores and ocean biomes with better flow and detail.</div>
+            <div class="cat-hint">Click to expand →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Structures -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="cat-card" role="button"
+             data-bs-toggle="modal" data-bs-target="#portfolioModal"
+             data-cat="Structures"
+             data-desc="Points of interest, ruins, and builds designed to reward exploration."
+             data-images="assets/images/showcase/structures/1.jpeg,
+                          assets/images/showcase/structures/2.jpeg,
+                          assets/images/showcase/structures/3.jpeg,
+                          assets/images/showcase/structures/4.jpeg,
+                          assets/images/showcase/structures/5.jpeg,
+                          assets/images/showcase/structures/6.jpeg,
+                          assets/images/showcase/structures/7.jpeg,
+                          assets/images/showcase/structures/8.jpeg,
+                          assets/images/showcase/structures/9.jpeg,
+                          assets/images/showcase/structures/10.jpeg,
+                          assets/images/showcase/structures/11.jpeg,
+                          assets/images/showcase/structures/12.jpeg,
+                          assets/images/showcase/structures/13.jpeg,
+                          assets/images/showcase/structures/14.jpeg,
+                          assets/images/showcase/structures/15.jpeg,
+                          assets/images/showcase/structures/16.jpeg,
+                          assets/images/showcase/structures/17.jpeg">
+          <img class="cat-thumb" src="assets/images/showcase/structures/1.jpeg" alt="Structures">
+          <div class="cat-body">
+            <div class="cat-title">Structures</div>
+            <div class="cat-desc">Ruins, POIs, and exploration locations.</div>
+            <div class="cat-hint">Click to expand →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mountains -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="cat-card" role="button"
+             data-bs-toggle="modal" data-bs-target="#portfolioModal"
+             data-cat="Mountains"
+             data-desc="Vertical terrain, silhouettes, peaks, and massive ridgelines."
+             data-images="assets/images/showcase/mountains/1.jpeg,
+                          assets/images/showcase/mountains/2.jpeg,
+                          assets/images/showcase/mountains/3.jpeg,
+                          assets/images/showcase/mountains/4.jpeg,
+                          assets/images/showcase/mountains/5.jpeg,
+                          assets/images/showcase/mountains/6.jpeg,
+                          assets/images/showcase/mountains/7.jpeg,
+                          assets/images/showcase/mountains/8.jpeg,
+                          assets/images/showcase/mountains/9.jpeg,
+                          assets/images/showcase/mountains/10.jpeg,
+                          assets/images/showcase/mountains/11.jpeg,
+                          assets/images/showcase/mountains/12.jpeg,
+                          assets/images/showcase/mountains/13.jpeg,
+                          assets/images/showcase/mountains/14.jpeg,
+                          assets/images/showcase/mountains/15.jpeg">
+          <img class="cat-thumb" src="assets/images/showcase/mountains/15.jpeg" alt="Mountains">
+          <div class="cat-body">
+            <div class="cat-title">Mountains</div>
+            <div class="cat-desc">Hand-shaped peaks, ridges, and cliffs built for real exploration.</div>
+            <div class="cat-hint">Click to expand →</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Underground (suggested 6th) -->
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="cat-card" role="button"
+             data-bs-toggle="modal" data-bs-target="#portfolioModal"
+             data-cat="Underground"
+             data-desc="Caves, mineshafts, depth shots, and survival-focused underground flow."
+             data-images="assets/images/showcase/underground/1.jpeg,
+                          assets/images/showcase/underground/2.jpeg,
+                          assets/images/showcase/underground/3.jpeg,
+                          assets/images/showcase/underground/4.jpeg,
+                          assets/images/showcase/underground/5.jpeg,
+                          assets/images/showcase/underground/6.jpeg">
+          <img class="cat-thumb" src="assets/images/showcase/underground/4.jpeg" alt="Underground">
+          <div class="cat-body">
+            <div class="cat-title">Underground</div>
+            <div class="cat-desc">Caves, depth, and hidden spaces.</div>
+            <div class="cat-hint">Click to expand →</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== One reusable modal for all categories ===== -->
+<div class="modal fade" id="portfolioModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <div>
+          <h5 class="modal-title" id="portfolioModalTitle">Category</h5>
+          <div class="mbr-fonts-style display-7" id="portfolioModalDesc" style="color: rgba(255,255,255,0.70);">
+            Description
+          </div>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="gallery-grid" id="portfolioModalGrid">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+
+      <div class="modal-footer" style="border-top: 1px solid rgba(255,255,255,0.10);">
+        <a class="btn btn-info-outline display-4" href="https://www.artstation.com/zhyrr" target="_blank">See Full Gallery</a>
+        <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Ask / Commission</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== MINI FAQ ===== -->
+<section data-bs-version="5.1" class="content16 cid-tjqfD1HjQw" id="mini-faq">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+              <div class="mbr-section-head align-center mb-4">
+                  <h3 class="mbr-section-title mb-0 mbr-fonts-style display-2"><strong>Portfolio FAQ</strong></h3>
+              </div>
+
+              <div id="bootstrap-accordion_portfolio" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
+
+                  <div class="card mb-3">
+                      <div class="card-header" role="tab" id="pHeadingOne">
+                          <a role="button" class="panel-title collapsed" data-bs-toggle="collapse" href="#pCollapse1" aria-expanded="false" aria-controls="pCollapse1">
+                              <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Can I use your portfolio images in my posts?</strong></h6>
+                              <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                          </a>
+                      </div>
+                      <div id="pCollapse1" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="pHeadingOne" data-bs-parent="#bootstrap-accordion_portfolio">
+                          <div class="panel-body">
+                              <p class="mbr-fonts-style panel-text display-4">
+                                You can share screenshots or link to my pages, but please don’t reupload my files or present the work as your own.
+                                For map usage rules, check the Terms of Service.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card mb-3">
+                      <div class="card-header" role="tab" id="pHeadingTwo">
+                          <a role="button" class="panel-title collapsed" data-bs-toggle="collapse" href="#pCollapse2" aria-expanded="false" aria-controls="pCollapse2">
+                              <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Do you take commissions?</strong></h6>
+                              <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                          </a>
+                      </div>
+                      <div id="pCollapse2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="pHeadingTwo" data-bs-parent="#bootstrap-accordion_portfolio">
+                          <div class="panel-body">
+                              <p class="mbr-fonts-style panel-text display-4">
+                                Yes, custom worlds and special requests are available. The best place to reach me is through Discord.
+                              </p>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="card mb-3">
+                      <div class="card-header" role="tab" id="pHeadingThree">
+                          <a role="button" class="panel-title collapsed" data-bs-toggle="collapse" href="#pCollapse3" aria-expanded="false" aria-controls="pCollapse3">
+                              <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Where can I see the full portfolio?</strong></h6>
+                              <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                          </a>
+                      </div>
+                      <div id="pCollapse3" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="pHeadingThree" data-bs-parent="#bootstrap-accordion_portfolio">
+                          <div class="panel-body">
+                              <p class="mbr-fonts-style panel-text display-4">
+                                The full gallery lives on ArtStation, with additional map releases on Patreon.
+                              </p>
+                              <div class="mt-3 text-center">
+                            <a href="https://www.artstation.com/zhyrr"
+                            target="_blank"
+                            class="btn btn-sm btn-primary">
+                                Check out my full Portfolio →
+                            </a>
+                        </div>
+                            
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- ===== DISCORD CTA (re-uses your existing style) ===== -->
+<section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-portfolio">
+  <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(1, 17, 26);"></div>
+  <div class="align-center container">
+      <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+              <h3 class="mbr-section-title mb-4 mbr-fonts-style display-1">
+                  <strong>Want a world like this?</strong>
+              </h3>
+              <p class="mbr-text mbr-fonts-style display-7" style="color: rgba(255,255,255,0.78);">
+                Join the Discord to suggest ideas, see previews, and ask about commissions.
+              </p>
+              <div class="mbr-section-btn">
+                <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Discord Server</a>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER (same as your site) ===== -->
+<section data-bs-version="5.1" class="footer1 cid-tkbGMWG3Nn" once="footer" id="footer01-portfolio">
+  <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-12 col-lg-6 my-auto px-4 align-left">
+              <p class="mbr-text text-grey mb-0 mbr-fonts-style display-7">
+                  © Copyright 2026 <strong>Zhyrr Designs</strong>. All rights reserved.<br>
+                  <a href="tos.html" class="text-primary" target="_blank">Terms of Service</a>
+              </p>
+          </div>
+          <div class="col-md-12 col-lg-6 px-4 align-right">
+              <div class="social-list">
+                  <div class="soc-item">
+                      <a href="https://x.com/Zhyrr_MC" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                      </a>
+                  </div>
+                  <div class="soc-item">
+                      <a href="https://www.patreon.com/ZhyrrDesigns" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-patreon socicon"></span>
+                      </a>
+                  </div>
+                  <div class="soc-item">
+                      <a href="https://www.youtube.com/@Zhyrr_MC" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
+                      </a>
+                  </div>
+                  <div class="soc-item">
+                      <a href="https://www.instagram.com/zhyrr_MC" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                      </a>
+                  </div>
+                  <div class="soc-item">
+                      <a href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
+                          <span class="mbr-iconfont mbr-iconfont-social socicon-discord socicon"></span>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/parallax/jarallax.js"></script>
+<script src="assets/smoothscroll/smooth-scroll.js"></script>
+<script src="assets/ytplayer/index.js"></script>
+<script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+<script src="assets/dropdown/js/navbar-dropdown.js"></script>
+<script src="assets/theme/js/script.js"></script>
+
+<input name="animation" type="hidden">
+
+<script>
+  // Build modal gallery from clicked card data
+  document.addEventListener("DOMContentLoaded", () => {
+    const modalEl = document.getElementById("portfolioModal");
+    if (!modalEl) return;
+
+    const titleEl = document.getElementById("portfolioModalTitle");
+    const descEl  = document.getElementById("portfolioModalDesc");
+    const gridEl  = document.getElementById("portfolioModalGrid");
+
+    modalEl.addEventListener("show.bs.modal", (event) => {
+      const trigger = event.relatedTarget;
+      if (!trigger) return;
+
+      const cat  = trigger.getAttribute("data-cat") || "Portfolio";
+      const desc = trigger.getAttribute("data-desc") || "";
+      const imgs = (trigger.getAttribute("data-images") || "").split(",").map(s => s.trim()).filter(Boolean);
+
+      titleEl.textContent = cat;
+      descEl.textContent = desc;
+
+      // Clear grid
+      gridEl.innerHTML = "";
+
+      // If you want the first image to be a larger hero:
+      if (imgs.length) {
+        const hero = document.createElement("div");
+        hero.className = "gallery-item gallery-hero";
+        hero.innerHTML = `<img src="${imgs[0]}" alt="${cat} hero">`;
+        gridEl.appendChild(hero);
+      }
+
+      // Add the rest (including first again if you want—here we skip index 0)
+      for (let i = 1; i < imgs.length; i++) {
+        const item = document.createElement("div");
+        item.className = "gallery-item";
+        item.innerHTML = `<img src="${imgs[i]}" alt="${cat} image ${i+1}">`;
+        gridEl.appendChild(item);
+      }
+
+      // If a category has too few images, pad with placeholders (optional)
+      if (imgs.length < 4) {
+        const note = document.createElement("div");
+        note.className = "mbr-fonts-style display-7";
+        note.style.color = "rgba(255,255,255,0.65)";
+        note.style.marginTop = "10px";
+        note.textContent = "More images coming soon for this category.";
+        gridEl.appendChild(note);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

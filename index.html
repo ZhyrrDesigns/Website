@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+
+<!-- SEO -->
+<meta name="description" content="Zhyrr Designs creates handcrafted Minecraft survival worlds built for exploration, challenge, and long-term gameplay.">
+
+<!-- Open Graph (Discord, WhatsApp, Facebook) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Your next Forever World!">
+<meta property="og:site_name" content="Zhyrr Designs">
+<meta property="og:description" content="Handcrafted Minecraft survival worlds by Zhyrr Designs, designed to stay interesting the longer you play.">
+<meta property="og:image" content="https://fantastic-pasca-d420d4.netlify.app/assets/images/preview.jpg">
+<meta property="og:url" content="https://fantastic-pasca-d420d4.netlify.app/">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your next Forever World!">
+<meta name="twitter:description" content="Handcrafted Minecraft survival worlds by Zhyrr Designs, built for exploration and survival.">
+<meta name="twitter:image" content="https://fantastic-pasca-d420d4.netlify.app/assets/images/preview.jpg">
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="assets/images/512xnewhypixel.png" type="image/x-icon">
+
+
+  
+  
+  <title>Your next Forever World!</title>
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
+  <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="assets/parallax/jarallax.css">
+  <link rel="stylesheet" href="assets/animatecss/animate.css">
+  <link rel="stylesheet" href="assets/dropdown/css/style.css">
+  <link rel="stylesheet" href="assets/socicon/css/styles.css">
+  <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Fredoka+One:400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One:400&display=swap"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+<style>
+  #slideshow-1 {
+    background-color: rgb(1, 17, 26);
+  }
+
+  #slideshow-1 .zhyrr-carousel {
+    position: relative;
+    width: 100%;
+  }
+
+  #slideshow-1 .zhyrr-viewport {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  #slideshow-1 .zhyrr-track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    will-change: transform;
+    transition: transform 0.7s ease;
+  }
+
+  /* IMPORTANT:
+     All tiles same width so centering works perfectly.
+     The “larger center” effect comes from scale, not width. */
+  #slideshow-1 .zhyrr-item {
+    flex: 0 0 auto;
+    width: min(72vw, 1400px); /* BIG landscape tiles */
+    padding: 0;
+  }
+
+  #slideshow-1 .zhyrr-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    min-height: 520px;
+    max-height: 860px;
+    overflow: hidden;
+    position: relative;
+    background: rgb(1, 17, 26);
+  }
+
+  #slideshow-1 .zhyrr-slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.6s ease, transform 0.6s ease, opacity 0.6s ease;
+  }
+
+  /* Side slides blurred */
+  #slideshow-1 .zhyrr-item .zhyrr-slide {
+    filter: blur(4px);
+    opacity: 0.65;
+    transform: scale(1.00);
+  }
+
+  /* Center slide sharp and slightly bigger */
+  #slideshow-1 .zhyrr-item.is-center .zhyrr-slide {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  /* Caption bottom-center (only visible on center slide) */
+  #slideshow-1 .zhyrr-caption {
+    position: absolute;
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+
+    background: rgba(1, 17, 26, 0.75);
+    backdrop-filter: blur(6px);
+    padding: 14px 18px;
+    border-radius: 14px;
+
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+    max-width: min(85%, 560px);
+  }
+
+  #slideshow-1 .zhyrr-item.is-center .zhyrr-caption {
+    opacity: 1;
+  }
+
+  #slideshow-1 .zhyrr-caption h5 {
+    margin: 0;
+    color: #fff;
+    font-size: 1.15rem;
+  }
+
+  #slideshow-1 .zhyrr-caption p {
+    margin: 6px 0 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.95rem;
+  }
+
+  /* Hide caption on spacers */
+  #slideshow-1 .zhyrr-spacer .zhyrr-caption {
+    display: none !important;
+  }
+
+  /* Navigation */
+  #slideshow-1 .zhyrr-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5rem;
+    height: 5rem;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  #slideshow-1 .zhyrr-prev { left: 0; }
+  #slideshow-1 .zhyrr-next { right: 0; }
+
+  /* Mobile: single image */
+  @media (max-width: 992px) {
+    #slideshow-1 .zhyrr-item {
+      width: 92vw;
+    }
+
+    #slideshow-1 .zhyrr-caption {
+      display: none;
+    }
+
+    #slideshow-1 .zhyrr-item .zhyrr-slide {
+      filter: none;
+      opacity: 1;
+      transform: none;
+    }
+  }
+/* ===== Story Section ===== */
+
+.content7 {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0; /* gives it presence */
+}
+
+/* Background overlay (slightly softer) */
+.content7::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35); /* lighter than before */
+  z-index: 0;
+}
+
+/* Ensure content stays above overlay */
+.content7 .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Card behind text */
+.story-card {
+  max-width: 860px;
+  margin: 0 auto;
+  background: rgba(10, 16, 22, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 2.8rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.55);
+}
+
+/* Title: centered, bigger, different font */
+.story-title {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Small divider under title */
+.story-divider {
+  width: 70px;
+  height: 3px;
+  margin: 0.85rem auto 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* Body text */
+.story-card p {
+  color: rgba(255, 255, 255, 0.90);
+  line-height: 1.9;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.60);
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .content7 { padding: 3.5rem 0; }
+  .story-card { padding: 2.1rem 1.6rem; }
+}
+</style>
+
+
+
+
+
+  
+</head>
+<body>
+  
+<section data-bs-version="5.1" class="menu menu2 cid-tkbL8n4vab" once="menu" id="menu2-16">
+    
+    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <span class="navbar-logo">
+                    <a href="#">
+                        <img src="assets/images/512xnewhypixel.png" alt="" style="height: 3rem;">
+                    </a>
+                </span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-white display-7" href="#">Zhyrr Designs</a></span>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html#features13-2">My Survival Worlds</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="index.html#features24-4">How to play</a></li><li class="nav-item"><a class="nav-link link text-white text-primary display-4"
+   href="portfolio.html">
+   Portfolio
+</a></li>
+                    <li class="nav-item"><a class="nav-link link text-white text-primary display-4" href="tos.html">TOS</a>
+                    </li></ul>
+                
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="https://www.patreon.com/ZhyrrDesigns" target="_blank"><span class="mobi-mbri mobi-mbri-shopping-basket mbr-iconfont mbr-iconfont-btn"></span>Play Here!&nbsp;</a></div>
+            </div>
+        </div>
+    </nav>
+</section>
+
+<section data-bs-version="5.1" class="header14 cid-tjqpRpO1sc mbr-fullscreen mbr-parallax-background" id="header14-d">
+
+    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(1, 17, 26);"></div>
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-12 col-md-6 image-wrapper">
+                <img src="assets/images/512xnewhypixel.png" alt="">
+            </div>
+            <div class="col-12 col-md">
+                <div class="text-wrapper">
+                    <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1">
+                    <strong>Hi, I’m Zhyrr!</strong>
+                    </h1>
+
+                    <p class="mbr-text mbr-fonts-style display-7">
+                      Most survival worlds get boring fast. <strong>This one doesn’t.</strong> Every <strong>mountain, valley, and ruin</strong> is placed with intention in mind! Specifically designed to <strong>pull you deeper the longer you play.</strong> If you want a world that actually <strong>challenges you to explore and survive</strong>, download it and see how far you get.
+                      <br><br>
+                      <strong>Join the Discord</strong> to help shape what comes next, suggest ideas, and <strong>influence future worlds.</strong> And if you want something made <strong>specifically for you</strong>, I also take commissions for <strong>custom Minecraft worlds</strong> and special requests.
+                     </p>
+
+                    <div class="mbr-section-btn mt-3">
+                        <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
+                            Join the Discord
+                        </a>
+                        <a class="btn btn-info-outline display-4" href="https://www.patreon.com/ZhyrrDesigns" target="_blank">
+                            Play the World &gt;
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="features12 cid-tjqffd3dFI" id="features13-2">
+
+    
+
+    
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mb-4 display-2">
+                            <strong>My Survival Worlds</strong></h4>
+                        <p class="mbr-text mbr-fonts-style mb-4 display-7">These are custom-made Minecraft survival worlds designed to feel natural, immersive, and worth exploring. Every landscape is carefully crafted to create meaningful gameplay, rewarding exploration, and long-term survival rather than quick burnout. Each world is built with intention, not randomness!&nbsp;<br></p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="item mbr-flex">
+                    <div class="icon-box">
+                        <span class="mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span>
+                    </div>
+                    <div class="text-box">
+                        <h4 class="icon-title mbr-black mbr-fonts-style display-7">
+                            <strong>Handcrafted Terrain</strong></h4>
+                        <h5 class="icon-text mbr-black mbr-fonts-style display-4"><div>Mountains, valleys, coastlines, and biomes are shaped by hand to create believable landscapes that feel alive and satisfying to explore from the very first spawn.&nbsp;</div></h5>
+                    </div>
+                </div>
+                <div class="item mbr-flex">
+                    <div class="icon-box">
+                        <span class="mbr-iconfont mobi-mbri-protect mobi-mbri"></span>
+                    </div>
+                    <div class="text-box">
+                        <h4 class="icon-title mbr-black mbr-fonts-style display-7">
+                            <strong>Designed for Survival</strong></h4>
+                        <h5 class="icon-text mbr-black mbr-fonts-style display-4">These worlds are balanced for real survival gameplay, with smart terrain flow, natural progression, and environments that challenge you without feeling unfair or empty.</h5>
+                    </div>
+                </div>
+                <div class="item mbr-flex">
+                    <div class="icon-box">
+                        <span class="mbr-iconfont mobi-mbri-briefcase mobi-mbri"></span>
+                    </div>
+                    <div class="text-box">
+                        <h4 class="icon-title mbr-black mbr-fonts-style display-7">
+                            <strong>Custom Requests Available</strong></h4>
+                        <h5 class="icon-text mbr-black mbr-fonts-style display-4">Looking for something specific? I also take commissions for custom worlds and special requests, whether it’s a unique biome layout, extreme terrain, or a world built for your server or group.&nbsp;<div><br></div></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-bs-version="5.1" id="slideshow-1" style="background-color: rgb(1, 17, 26); padding: 4rem 0;">
+
+  <div class="container-fluid text-center mb-4">
+    <h2 class="mbr-fonts-style display-2 text-white">
+      <strong>Impressions:</strong>
+    </h2>
+    <p class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.7);">
+      Take a glimpse into the landscapes. Designed by hand. Built to explore. Made to survive.
+    </p>
+  </div>
+
+  <div class="container-fluid px-0">
+    <div id="zhyrrCarousel" class="zhyrr-carousel">
+
+      <button class="zhyrr-nav zhyrr-prev" type="button" aria-label="Previous">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+
+      <div class="zhyrr-viewport">
+        <div class="zhyrr-track">
+
+          <!-- Spacer using image 8 -->
+        <div class="zhyrr-item zhyrr-spacer">
+        <div class="zhyrr-frame">
+            <img src="assets/images/slideshowimages/8.jpeg" class="zhyrr-slide" alt="">
+        </div>
+        </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/1.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Custom Everything!</h5>
+                <p>No presets, no shortcuts. Every biome, terrain feature, and point of interest is built by hand.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/2.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Custom Ocean Biomes</h5>
+                <p>Oceans are completely overhauled, hiding custom ruins, unique underwater life, and forgotten depths.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/3.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Survival Experience</h5>
+                <p>Designed first and foremost for survival, rewarding exploration and long-term playability.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/4.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Open Plains</h5>
+                <p>Wide, open landscapes that feel natural and grounded, while supporting smooth survival progression.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/5.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Point of Interest</h5>
+                <p>Points of interest are placed with purpose, giving the world landmarks without overwhelming it.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/6.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Rocky Highlands</h5>
+                <p>Steep cliffs, jagged ridges, and vertical terrain built to feel massive and imposing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/7.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Beaches</h5>
+                <p>Thoughtful coastlines where land meets sea naturally, from shallow shores to deep waters.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="zhyrr-item">
+            <div class="zhyrr-frame">
+              <img src="assets/images/slideshowimages/8.jpeg" class="zhyrr-slide" alt="">
+              <div class="zhyrr-caption">
+                <h5>Endless Exploration</h5>
+                <p>The world stretches outward with vast mountain ranges and distant horizons begging to be explored.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Spacer using image 1 -->
+            <div class="zhyrr-item zhyrr-spacer">
+            <div class="zhyrr-frame">
+                <img src="assets/images/slideshowimages/1.jpeg" class="zhyrr-slide" alt="">
+            </div>
+            </div>
+
+        </div>
+      </div>
+
+      <button class="zhyrr-nav zhyrr-next" type="button" aria-label="Next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<section data-bs-version="5.1" class="features23 cid-tjqfAD0JSA" id="features24-4">
+
+    
+
+    
+    <div class="mbr-overlay" style="opacity: 0.7; background-color: rgb(1, 17, 26);">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card-wrapper mb-4">
+                    <div class="card-box align-center">
+                        <h4 class="card-title mbr-fonts-style mb-4 display-2">
+                            <strong>How to play?</strong></h4>
+                        <p class="mbr-text mbr-fonts-style mb-4 display-7">
+                            Get started in just a few steps.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="item first mbr-flex p-4">
+                    <div class="icon-wrap w-100">
+                        <div class="icon-box">
+                            <span class="step-number mbr-fonts-style display-5">1</span>
+                        </div>
+                    </div>
+
+                    <div class="text-box">
+                        <h4 class="icon-title card-title mbr-black mbr-fonts-style display-7">
+                            <strong>Download via Patreon</strong></h4>
+                        <h5 class="mbr-text mbr-black mbr-fonts-style display-4">Get access to the survival world through Patreon and download the world files from the post.</h5>
+                    </div>
+                </div>
+                <!-- <span mbr-icon class="mbr-iconfont mobi-mbri-devices mobi-mbri"></span> -->
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="item mbr-flex p-4">
+                    <div class="icon-wrap w-100">
+                        <div class="icon-box">
+                            <span class="step-number mbr-fonts-style display-5">2</span>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <h4 class="icon-title card-title mbr-black mbr-fonts-style display-7">
+                            <strong>Add it to Minecraft</strong></h4>
+                        <h5 class="mbr-text mbr-black mbr-fonts-style display-4">Move the downloaded world folder into your Minecraft saves directory and launch the game.</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="item mbr-flex p-4">
+                    <div class="icon-wrap w-100">
+                        <div class="icon-box">
+                            <span class="step-number mbr-fonts-style display-5">3</span>
+                        </div>
+                    </div>
+                    <div class="text-box">
+                        <h4 class="icon-title card-title mbr-black mbr-fonts-style display-7">
+                            <strong>You’re ready to play!</strong></h4>
+                        <h5 class="mbr-text mbr-black mbr-fonts-style display-4">Open Minecraft, select the world, and start your Survival Adventure!</h5>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content7 cid-tjqfrB7rtr" id="content7-3">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="story-card">
+          <div class="story-title">Where it all began</div>
+<div class="story-divider"></div>
+
+<p class="mbr-text mbr-fonts-style display-4 mt-4">
+  What began as a simple love for Minecraft terrain slowly grew into something much bigger. For the past eight years, I’ve been creating custom worlds with one clear goal: crafting landscapes that feel real, immersive, and genuinely worth exploring. Over time, I learned what makes a world fun to survive in, not just nice to look at. Every mountain, valley, and coastline I build is shaped by experience, mistakes, and constant refinement. These worlds are the result of years of passion, experimentation, and a genuine love for creating places where other players can tell their own stories.
+</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-11">
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(1, 17, 26);"></div>
+    <div class="align-center container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <h3 class="mbr-section-title mb-4 mbr-fonts-style display-1">
+                    <strong>Join the Discord Server&nbsp;</strong></h3>
+                
+                <div class="mbr-section-btn"><a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Discord Server</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="content16 cid-tjqfD1HjQw" id="content16-5">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="mbr-section-head align-center mb-4">
+                    <h3 class="mbr-section-title mb-0 mbr-fonts-style display-2"><strong>FAQ</strong></h3>
+                    
+                </div>
+                <div id="bootstrap-accordion_6" class="panel-group accordionStyles accordion" role="tablist" aria-multiselectable="true">
+                    <div class="card mb-3">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse1_6" aria-expanded="false" aria-controls="collapse1">
+                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>How do you create your terrains?</strong></h6>
+                                <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                            </a>
+                        </div>
+                        <div id="collapse1_6" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_6">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-4">I create my terrains using my own custom brush and heightmap bundle, built over years of worldbuilding. These brushes let me shape mountains, coastlines, oceans, and biomes quickly while keeping everything natural and consistent across the map.</p>
+                                <div class="mt-3 text-center">
+    <a href="https://www.patreon.com/ZhyrrDesigns/shop/create-your-own-world-here-ultimate-300-930319?source=storefront"
+       target="_blank"
+       class="btn btn-sm btn-primary">
+        Create your own world →
+    </a>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse2_6" aria-expanded="false" aria-controls="collapse2">
+                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>How big are the worlds?</strong></h6>
+                                <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                            </a>
+                        </div>
+                        <div id="collapse2_6" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_6">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-4">
+                                    Most of my maps are massive handcrafted worlds, starting at 2k (2048 x 2048) and going up to 10k (9984 x 9984). These worlds are many times larger than standard custom maps and are designed to support long-term survival and exploration.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse3_6" aria-expanded="false" aria-controls="collapse3">
+                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Do the maps blend into vanilla terrain?</strong></h6>
+                                <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                            </a>
+                        </div>
+                        <div id="collapse3_6" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_6">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-4">
+                                    On Java Edition, the handcrafted world blends seamlessly into a normal vanilla Minecraft seed, allowing infinite exploration beyond the custom area. On Bedrock, the custom world has a clear boundary due to technical limitations, but vanilla terrain continues beyond it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse4_6" aria-expanded="false" aria-controls="collapse4">
+                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Do structures have custom loot?</strong></h6>
+                                <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                            </a>
+                        </div>
+                        <div id="collapse4_6" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_6">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-4">
+                                    Yes. All structures use custom builds and randomized loot tables inspired by vanilla Minecraft. You will never find identical chests, and exploration is always rewarded.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse5_6" aria-expanded="false" aria-controls="collapse5">
+                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Are animals and villagers included?</strong></h6>
+                                <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                            </a>
+                        </div>
+                        <div id="collapse5_6" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_6">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-4">
+                                    Animals spawn naturally in their correct biomes, just like vanilla. Villagers spawn in villages using spawners, so villages never run out of villagers during survival gameplay.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-header" role="tab" id="headingOne">
+                            <a role="button" class="panel-title collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-core="" href="#collapse6_6" aria-expanded="false" aria-controls="collapse6">
+                                <h6 class="panel-title-edit mbr-fonts-style mb-0 display-7"><strong>Can I use these maps for servers or content creation?</strong></h6>
+                                <span class="sign mbr-iconfont mbri-arrow-down"></span>
+                            </a>
+                        </div>
+                        <div id="collapse6_6" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion" data-bs-parent="#bootstrap-accordion_6">
+                            <div class="panel-body">
+                                <p class="mbr-fonts-style panel-text display-4">
+                                    Absolutely. You are free to use my maps for servers, YouTube videos, survival with friends, or personal projects. Selling or redistributing the maps themselves is not allowed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="footer1 cid-tkbGMWG3Nn" once="footer" id="footer01-15">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-6 my-auto px-4 align-left">
+                <p class="mbr-text text-grey mb-0 mbr-fonts-style display-7">
+                    © Copyright 2026 <strong>Zhyrr Designs</strong>. All rights reserved.<br> <a href="tos.html" class="text-primary" target="_blank">Terms of Service</a>
+            </div>
+            <div class="col-md-12 col-lg-6 px-4 align-right">
+                <div class="social-list">
+                    <div class="soc-item">
+                        <a href="https://x.com/Zhyrr_MC" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.patreon.com/ZhyrrDesigns" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-patreon socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.youtube.com/@Zhyrr_MC" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-youtube socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://www.instagram.com/zhyrr_MC" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-instagram socicon"></span>
+                        </a>
+                    </div>
+                    <div class="soc-item">
+                        <a href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
+                            <span class="mbr-iconfont mbr-iconfont-social socicon-discord socicon"></span>
+                        </a>
+                    </div>
+
+                    
+
+                    
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/parallax/jarallax.js"></script>
+  <script src="assets/smoothscroll/smooth-scroll.js"></script>
+  <script src="assets/ytplayer/index.js"></script>
+  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>
+  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+  <script src="assets/theme/js/script.js"></script>
+  
+  
+  
+  <input name="animation" type="hidden">
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.getElementById("zhyrrCarousel");
+  if (!root) return;
+
+  const viewport = root.querySelector(".zhyrr-viewport");
+  const track = root.querySelector(".zhyrr-track");
+  const items = Array.from(root.querySelectorAll(".zhyrr-item"));
+  const btnPrev = root.querySelector(".zhyrr-prev");
+  const btnNext = root.querySelector(".zhyrr-next");
+
+  // Indices:
+  // 0 = left spacer (fake 8)
+  // 1..N = real slides
+  // last = right spacer (fake 1)
+  const FIRST_REAL = 1;
+  const LAST_REAL  = items.length - 2;
+  const LEFT_SPACER = 0;
+  const RIGHT_SPACER = items.length - 1;
+
+  let index = FIRST_REAL;
+  let autoTimer = null;
+  const AUTO_DELAY = 4200;
+
+  function setCenterClass() {
+    items.forEach((el, i) => {
+      const spacer = el.classList.contains("zhyrr-spacer");
+      el.classList.toggle("is-center", i === index && !spacer);
+    });
+  }
+
+  function setTrackTransition(on) {
+    track.style.transition = on ? "transform 0.7s ease" : "none";
+  }
+
+  function centerOnIndex() {
+    if (!items.length) return;
+
+    let offsetBefore = 0;
+    for (let i = 0; i < index; i++) {
+      offsetBefore += items[i].getBoundingClientRect().width;
+    }
+
+    const itemW = items[index].getBoundingClientRect().width;
+    const viewportW = viewport.getBoundingClientRect().width;
+    const offset = -(offsetBefore - viewportW / 2 + itemW / 2);
+
+    track.style.transform = `translateX(${offset}px)`;
+    setCenterClass();
+  }
+
+  // If we hit a spacer, jump to the corresponding real slide (no animation).
+  function normalizeIfSpacer() {
+    if (index === LEFT_SPACER) {
+      index = LAST_REAL;            // go to real 8
+    } else if (index === RIGHT_SPACER) {
+      index = FIRST_REAL;           // go to real 1
+    } else {
+      return;
+    }
+
+    // Jump instantly (no transition), then re-enable transitions.
+    setTrackTransition(false);
+    centerOnIndex();
+    // force reflow so the browser applies "none" before restoring
+    track.offsetHeight; 
+    setTrackTransition(true);
+  }
+
+  function next() {
+    index += 1;
+    setTrackTransition(true);
+    centerOnIndex();
+    // after the animated move, if we landed on spacer, snap to real slide
+    track.addEventListener("transitionend", normalizeIfSpacer, { once: true });
+  }
+
+  function prev() {
+    index -= 1;
+    setTrackTransition(true);
+    centerOnIndex();
+    track.addEventListener("transitionend", normalizeIfSpacer, { once: true });
+  }
+
+  function startAuto() {
+    stopAuto();
+    autoTimer = setInterval(next, AUTO_DELAY);
+  }
+
+  function stopAuto() {
+    if (autoTimer) {
+      clearInterval(autoTimer);
+      autoTimer = null;
+    }
+  }
+
+  btnNext.addEventListener("click", (e) => {
+    e.preventDefault();
+    stopAuto();
+    next();
+    startAuto();
+  });
+
+  btnPrev.addEventListener("click", (e) => {
+    e.preventDefault();
+    stopAuto();
+    prev();
+    startAuto();
+  });
+
+  root.addEventListener("mouseenter", stopAuto);
+  root.addEventListener("mouseleave", startAuto);
+
+  window.addEventListener("resize", () => {
+    // keep the current index centered without weird animation
+    setTrackTransition(false);
+    centerOnIndex();
+    track.offsetHeight;
+    setTrackTransition(true);
+  });
+
+  // initial
+  setTrackTransition(false);
+  centerOnIndex();
+  track.offsetHeight;
+  setTrackTransition(true);
+  startAuto();
+});
+</script>
+
+
+
+
+
+
+  </body>
+</html>
