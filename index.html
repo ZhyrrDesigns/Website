@@ -60,9 +60,16 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.32);
+
+  background-image: url("https://zhyrrdesigns.com/assets/images/showcase/overviews/2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(8px) brightness(0.55);
+  transform: scale(1.05); /* prevents blur edges */
   z-index: 0;
 }
+
 
 .commission .container {
   position: relative;
@@ -760,7 +767,7 @@
 
 
 <section data-bs-version="5.1" class="commission cid-commission-pipeline" id="commission-pipeline">
-  <div class="mbr-overlay" style="opacity: 0.65; background-color: rgb(1, 17, 26);"></div>
+  <div class="mbr-overlay" style="opacity: 0.25; background-color: rgb(1, 17, 26);"></div>
 
   <div class="container">
     <div class="row justify-content-center">
