@@ -415,6 +415,138 @@
   .content7 { padding: 3.5rem 0; }
   .story-card { padding: 2.1rem 1.6rem; }
 }
+
+
+/* ===== Commission + Pricing Split ===== */
+
+.commission-split {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr; /* pipeline wider */
+  gap: 1rem;
+  margin-top: 1.4rem;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .commission-split { grid-template-columns: 1fr; }
+}
+
+/* Pricing card */
+.pricing-card {
+  padding: 1.25rem 1.25rem 1.15rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.pricing-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+.pricing-title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #fff;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.pricing-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.45);
+  box-shadow: 0 0 0 4px rgba(255,255,255,0.06);
+}
+
+.pricing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.32rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.62rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.price-row:last-child { border-bottom: 0; }
+
+.price-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.price-size {
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.price-sub {
+  color: rgba(255,255,255,0.65);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.price-eur {
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+/* Notes */
+.pricing-notes {
+  margin-top: 0.95rem;
+  padding-top: 0.95rem;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.74);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.pricing-notes strong {
+  color: rgba(255,255,255,0.92);
+  font-weight: 700;
+}
+
+/* Small icon bullets */
+.note-line {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.55rem;
+}
+
+.note-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.35);
+  margin-top: 0.45rem;
+  flex: 0 0 auto;
+}
 </style>
 
 
@@ -768,70 +900,168 @@
 
 
 <section data-bs-version="5.1" class="commission cid-commission-pipeline" id="commission-pipeline">
-  <div class="mbr-overlay" style="opacity: 0.25; background-color: rgb(1, 17, 26);"></div>
+  <div class="mbr-overlay" style="opacity: 0.45; background-color: rgb(1, 17, 26);"></div>
 
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
         <div class="commission-card">
 
+          <!-- Title -->
           <div class="commission-title">Commission Pipeline</div>
           <div class="commission-divider"></div>
           <p class="commission-sub">
-            Want a world built specifically for your server, SMP, or friend group? Here’s how we go from idea → playable map,
-            with clear steps, frequent updates, and a final result that matches what you imagine.
+            Looking for a world built specifically for your server, SMP, or friend group?
+            Here’s how we go from an idea to a finished, playable Minecraft world.
           </p>
 
-          <div class="pipeline-grid">
+          <!-- SPLIT LAYOUT -->
+          <div class="commission-split">
 
-            <div class="pipeline-step">
-              <div class="pipeline-top">
-                <div class="pipeline-number">1</div>
-                <h5>Idea & Direction</h5>
+            <!-- LEFT: PIPELINE -->
+            <div class="pipeline-grid" style="margin-top:0;">
+
+              <div class="pipeline-step">
+                <div class="pipeline-top">
+                  <div class="pipeline-number">1</div>
+                  <h5>Idea & Direction</h5>
+                </div>
+                <p>
+                  We discuss your vision and I ask the important questions: map size vs. player count,
+                  biome distribution, progression, landmarks, and overall vibe.
+                  I’ll share my experience and suggestions, but the goal is always the same:
+                  <strong>build what you envision</strong>.
+                </p>
               </div>
-              <p>
-                We talk about your vision and I ask the important questions: map size vs. player count, the vibe you want,
-                biome spacing (some biomes work better farther apart), progression, landmarks, and any “must-have” features.
-                I’ll share honest suggestions, but the goal is always the same: <strong>build what you envision</strong>.
-              </p>
+
+              <div class="pipeline-step">
+                <div class="pipeline-top">
+                  <div class="pipeline-number">2</div>
+                  <h5>Planning & Downpayment</h5>
+                </div>
+                <p>
+                  Once everything is clearly planned out, I require a
+                  <strong>50% downpayment</strong> to secure the commission.
+                  After that, the build phase begins.
+                </p>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="pipeline-top">
+                  <div class="pipeline-number">3</div>
+                  <h5>Build Phase & Feedback</h5>
+                </div>
+                <p>
+                  During development, I share frequent progress updates and screenshots.
+                  You can give feedback along the way so we stay aligned and make adjustments early.
+                </p>
+              </div>
+
+              <div class="pipeline-step">
+                <div class="pipeline-top">
+                  <div class="pipeline-number">4</div>
+                  <h5>Final Preview & Delivery</h5>
+                </div>
+                <p>
+                  When the world is ready, I send final in-game screenshots.
+                  After the remaining <strong>50%</strong> is paid, I deliver the map.
+                  You can request <strong>small finishing tweaks</strong> after testing.
+                </p>
+              </div>
+
             </div>
 
-            <div class="pipeline-step">
-              <div class="pipeline-top">
-                <div class="pipeline-number">2</div>
-                <h5>Planning & Downpayment</h5>
-              </div>
-              <p>
-                Once the plan is locked in, I ask for a <strong>50% downpayment</strong> to secure the slot and protect my time.
-                After that, I start building.
-              </p>
-            </div>
+            <!-- RIGHT: PRICING -->
+            <div class="pricing-card">
 
-            <div class="pipeline-step">
-              <div class="pipeline-top">
-                <div class="pipeline-number">3</div>
-                <h5>Build Phase (Updates & Feedback)</h5>
+              <div class="pricing-head">
+                <h5 class="pricing-title">
+                  <span class="pricing-dot"></span>
+                  Commission Pricing
+                </h5>
+                <span class="pricing-badge">All biomes included</span>
               </div>
-              <p>
-                I’ll send frequent progress updates and screenshots so you can react early, what you love, what you want adjusted,
-                and what should be pushed further. This keeps us aligned and prevents surprises at the end.
-              </p>
-            </div>
 
-            <div class="pipeline-step">
-              <div class="pipeline-top">
-                <div class="pipeline-number">4</div>
-                <h5>Final Preview, Delivery & Small Tweaks</h5>
+              <ul class="price-list">
+                <li class="price-row">
+                  <div class="price-left">
+                    <span class="price-size">1k</span>
+                    <span class="price-sub">Small / quick start</span>
+                  </div>
+                  <span class="price-eur">€80</span>
+                </li>
+
+                <li class="price-row">
+                  <div class="price-left">
+                    <span class="price-size">2k</span>
+                    <span class="price-sub">Compact SMP</span>
+                  </div>
+                  <span class="price-eur">€150</span>
+                </li>
+
+                <li class="price-row">
+                  <div class="price-left">
+                    <span class="price-size">4k</span>
+                    <span class="price-sub">Balanced exploration</span>
+                  </div>
+                  <span class="price-eur">€300</span>
+                </li>
+
+                <li class="price-row">
+                  <div class="price-left">
+                    <span class="price-size">6k</span>
+                    <span class="price-sub">Long-term survival</span>
+                  </div>
+                  <span class="price-eur">€450</span>
+                </li>
+
+                <li class="price-row">
+                  <div class="price-left">
+                    <span class="price-size">8k</span>
+                    <span class="price-sub">Large servers</span>
+                  </div>
+                  <span class="price-eur">€600</span>
+                </li>
+
+                <li class="price-row">
+                  <div class="price-left">
+                    <span class="price-size">10k</span>
+                    <span class="price-sub">“Forever” world</span>
+                  </div>
+                  <span class="price-eur">€750</span>
+                </li>
+
+                <li class="price-row">
+                  <div class="price-left">
+                    <span class="price-size">15k+</span>
+                    <span class="price-sub">Custom quote</span>
+                  </div>
+                  <span class="price-eur">€1100+</span>
+                </li>
+              </ul>
+
+              <div class="pricing-notes">
+                <div class="note-line">
+                  <span class="note-bullet"></span>
+                  <div>
+                    All commissions include <strong>any biome types</strong>. Layout and distribution
+                    are planned together to best fit your gameplay goals.
+                  </div>
+                </div>
+
+                <div class="note-line">
+                  <span class="note-bullet"></span>
+                  <div>
+                    Prices are an <strong>estimation</strong>. Final pricing may change depending on
+                    complexity, deadlines, or additional custom requirements.
+                  </div>
+                </div>
               </div>
-              <p>
-                When the world is ready, I send in-game screenshots as a final preview. You complete the remaining
-                <strong>50%</strong>, and I deliver the map. After you test it, you can request <strong>small finishing touches</strong>
-                so everything feels perfect.
-              </p>
-            </div>
 
+            </div>
           </div>
 
+          <!-- CONTACT -->
           <div class="commission-cta">
             <a class="contact-pill" href="mailto:info@zhyrrdesigns.com">
               <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
@@ -844,7 +1074,7 @@
             </a>
 
             <div class="commission-note">
-              Quick message is enough, tell me your rough idea + preferred map size, and we’ll take it from there.
+              A short message is enough — just tell me your idea and preferred map size.
             </div>
           </div>
 
