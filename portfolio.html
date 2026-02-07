@@ -33,267 +33,271 @@
 <style>
 
     .card.mb-3 {
-  padding: 0px 1rem;
-}
-  /* ===== Page tone ===== */
-  body { background-color: rgb(1, 17, 26); }
+      padding: 0px 1rem;
+    }
+    /* ===== Page tone ===== */
+    body { background-color: rgb(1, 17, 26); }
 
-  /* ===== Hero tweaks ===== */
-  .hero-subtext {
-    color: rgba(255,255,255,0.85);
-    line-height: 1.8;
-  }
+    /* ===== Hero tweaks ===== */
+    .hero-subtext {
+      color: rgba(255,255,255,0.85);
+      line-height: 1.8;
+    }
 
-  /* ===== Portfolio grid ===== */
-  #portfolio-grid {
-    background-color: rgb(1, 17, 26);
-    padding: 4.5rem 0;
-  }
+    /* ===== Portfolio grid ===== */
+    #portfolio-grid {
+      background-color: rgb(1, 17, 26);
+      padding: 4.5rem 0;
+    }
 
-  .port-card {
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.10);
-    background: rgba(10, 16, 22, 0.70);
-    box-shadow: 0 18px 60px rgba(0,0,0,0.45);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    height: 100%;
-  }
+    .port-card {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(10, 16, 22, 0.70);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      height: 100%;
+    }
 
-  .port-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 26px 80px rgba(0,0,0,0.60);
-    border-color: rgba(255,255,255,0.18);
-  }
+    .port-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 80px rgba(0,0,0,0.60);
+      border-color: rgba(255,255,255,0.18);
+    }
 
-  .port-thumb {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    display: block;
-    background: rgba(1, 17, 26, 1);
-  }
+    .port-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: rgba(1, 17, 26, 1);
+    }
 
-  .port-body {
-    padding: 1.2rem 1.3rem 1.35rem;
-  }
+    .port-body {
+      padding: 1.2rem 1.3rem 1.35rem;
+    }
 
-  .port-title {
-    color: #fff;
-    margin: 0 0 0.35rem;
-    font-size: 1.15rem;
-    font-weight: 700;
-  }
+    .port-title {
+      color: #fff;
+      margin: 0 0 0.35rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
 
-  .port-desc {
-    color: rgba(255,255,255,0.72);
-    margin: 0 0 0.85rem;
-    line-height: 1.6;
-    font-size: 0.98rem;
-  }
+    .port-desc {
+      color: rgba(255,255,255,0.72);
+      margin: 0 0 0.85rem;
+      line-height: 1.6;
+      font-size: 0.98rem;
+    }
 
-  .tag-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 1rem;
-  }
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
 
-  .tag {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.75);
-    border: 1px solid rgba(255,255,255,0.14);
-    background: rgba(1, 17, 26, 0.65);
-    padding: 6px 10px;
-    border-radius: 999px;
-    white-space: nowrap;
-  }
+    .tag {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(1, 17, 26, 0.65);
+      padding: 6px 10px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
 
-  .port-actions {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
+    .port-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
 
-  /* ===== Simple highlight strip ===== */
-  #cred-strip {
-    padding: 3.5rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-  #cred-strip::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: rgba(0,0,0,0.25);
-    z-index:0;
-  }
-  #cred-strip .container{ position:relative; z-index:1; }
+    /* ===== Simple highlight strip ===== */
+    #cred-strip {
+      padding: 3.5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    #cred-strip::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background: rgba(0,0,0,0.25);
+      z-index:0;
+    }
+    #cred-strip .container{ position:relative; z-index:1; }
 
-  .cred-card{
-    max-width: 980px;
-    margin: 0 auto;
-    border-radius: 22px;
-    padding: 2.2rem 2.2rem;
-    background: rgba(10,16,22,0.70);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.10);
-    box-shadow: 0 26px 70px rgba(0,0,0,0.55);
-  }
+    .cred-card{
+      max-width: 980px;
+      margin: 0 auto;
+      border-radius: 22px;
+      padding: 2.2rem 2.2rem;
+      background: rgba(10,16,22,0.70);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.10);
+      box-shadow: 0 26px 70px rgba(0,0,0,0.55);
+    }
 
-  .cred-title{
-    font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    color:#fff;
-    font-size: clamp(1.4rem, 2vw, 2rem);
-    margin: 0 0 0.85rem;
-    text-align:center;
-  }
+    .cred-title{
+      font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:#fff;
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      margin: 0 0 0.85rem;
+      text-align:center;
+    }
 
-  .cred-text{
-    color: rgba(255,255,255,0.86);
-    line-height: 1.85;
-    margin: 0;
-    text-align:center;
-  }
+    .cred-text{
+      color: rgba(255,255,255,0.86);
+      line-height: 1.85;
+      margin: 0;
+      text-align:center;
+    }
 
-  /* ===== Mini FAQ ===== */
-  #mini-faq {
-    background-color: rgb(1, 17, 26);
-    padding: 4.5rem 0;
-  }
-  #mini-faq .card {
-    background: rgba(10,16,22,0.70);
-    border: 1px solid rgba(255,255,255,0.10);
-  }
-  #mini-faq .panel-text,
-  #mini-faq .panel-title-edit,
-  #mini-faq .mbr-iconfont,
-  #mini-faq strong {
-    color: #fff !important;
-  }
-  #mini-faq .panel-text {
-    color: rgba(255,255,255,0.80) !important;
-  }
+    /* ===== Mini FAQ ===== */
+    #mini-faq {
+      background-color: rgb(1, 17, 26);
+      padding: 4.5rem 0;
+    }
+    #mini-faq .card {
+      background: rgba(10,16,22,0.70);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+    #mini-faq .panel-text,
+    #mini-faq .panel-title-edit,
+    #mini-faq .mbr-iconfont,
+    #mini-faq strong {
+      color: #fff !important;
+    }
+    #mini-faq .panel-text {
+      color: rgba(255,255,255,0.80) !important;
+    }
 
-  /* Better mobile spacing */
-  @media (max-width: 768px){
-    .cred-card{ padding: 1.8rem 1.4rem; }
-  }
+    /* Better mobile spacing */
+    @media (max-width: 768px){
+      .cred-card{ padding: 1.8rem 1.4rem; }
+    }
 
-  /* ===== Portfolio Category Grid ===== */
-  #portfolio-cats {
-    background-color: rgb(1, 17, 26);
-    padding: 4.5rem 0;
-  }
+    /* ===== Portfolio Category Grid ===== */
+    #portfolio-cats {
+      background-color: rgb(1, 17, 26);
+      padding: 4.5rem 0;
+    }
 
-  .cat-card {
-    border-radius: 18px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.10);
-    background: rgba(10, 16, 22, 0.70);
-    box-shadow: 0 18px 60px rgba(0,0,0,0.45);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
-    cursor: pointer;
-    height: 100%;
-  }
+    .cat-card {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(10, 16, 22, 0.70);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+      height: 100%;
+    }
 
-  .cat-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 26px 80px rgba(0,0,0,0.60);
-    border-color: rgba(255,255,255,0.18);
-  }
+    .cat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 26px 80px rgba(0,0,0,0.60);
+      border-color: rgba(255,255,255,0.18);
+    }
 
-  .cat-thumb {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    display: block;
-    background: rgba(1, 17, 26, 1);
-  }
+    .cat-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      background: rgba(1, 17, 26, 1);
+    }
 
-  .cat-body {
-    padding: 1.1rem 1.2rem 1.2rem;
-  }
+    .cat-body {
+      padding: 1.1rem 1.2rem 1.2rem;
+    }
 
-  .cat-title {
-    color: #fff;
-    margin: 0 0 0.35rem;
-    font-size: 1.15rem;
-    font-weight: 800;
-  }
+    .cat-title {
+      color: #fff;
+      margin: 0 0 0.35rem;
+      font-size: 1.15rem;
+      font-weight: 800;
+    }
 
-  .cat-desc {
-    color: rgba(255,255,255,0.72);
-    margin: 0;
-    line-height: 1.55;
-    font-size: 0.98rem;
-  }
+    .cat-desc {
+      color: rgba(255,255,255,0.72);
+      margin: 0;
+      line-height: 1.55;
+      font-size: 0.98rem;
+    }
 
-  .cat-hint {
-    color: rgba(255,255,255,0.55);
-    margin-top: 0.75rem;
-    font-size: 0.9rem;
-  }
+    .cat-hint {
+      color: rgba(255,255,255,0.55);
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+    }
 
-  /* ===== Modal Gallery ===== */
-  .modal-content {
-    background: rgba(10, 16, 22, 0.95);
-    border: 1px solid rgba(255,255,255,0.12);
-  }
+    /* ===== Modal Gallery ===== */
+    .modal-content {
+      background: rgba(10, 16, 22, 0.95);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
 
-  .modal-title {
-    color: #fff;
-    font-weight: 800;
-  }
+    .modal-title {
+      color: #fff;
+      font-weight: 800;
+    }
 
-  .modal .btn-close {
-    filter: invert(1);
-    opacity: 0.85;
-  }
+    .modal .btn-close {
+      filter: invert(1);
+      opacity: 0.85;
+    }
 
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 12px;
-  }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
 
-  .gallery-item {
-    grid-column: span 6;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.10);
-    background: rgba(1,17,26,0.65);
-  }
+    .gallery-item {
+      grid-column: span 6;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(1,17,26,0.65);
+    }
 
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.25s ease, opacity 0.25s ease;
-    opacity: 0.95;
-  }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      opacity: 0.95;
+      cursor: zoom-in; /* clickable feel */
+    }
 
-  .gallery-item:hover img {
-    transform: scale(1.03);
-    opacity: 1;
-  }
+    .gallery-item:hover img {
+      transform: scale(1.03);
+      opacity: 1;
+    }
 
-  /* Larger “hero” image inside modal */
-  .gallery-hero {
-    grid-column: span 12;
-  }
+    /* Larger “hero” image inside modal */
+    .gallery-hero {
+      grid-column: span 12;
+    }
 
-  .gallery-hero img {
-    aspect-ratio: 21 / 9;
-  }
+    .gallery-hero img {
+      aspect-ratio: 21 / 9;
+    }
 
-  @media (max-width: 992px) {
-    .gallery-item { grid-column: span 12; }
-    .gallery-hero img { aspect-ratio: 16 / 9; }
-  }
+    @media (max-width: 992px) {
+      .gallery-item { grid-column: span 12; }
+      .gallery-hero img { aspect-ratio: 16 / 9; }
+    }
+
+    /* Lightbox image cursor */
+    #lightboxImg { cursor: zoom-out; }
 
 </style>
 
@@ -406,8 +410,8 @@
     <div class="row justify-content-center mb-4">
       <div class="col-12 col-lg-8 text-center">
         <h2 class="mbr-fonts-style display-2 text-primary mb-2 portfolio-title">
-  <strong>Portfolio</strong>
-</h2>
+          <strong>Portfolio</strong>
+        </h2>
         <p class="mbr-fonts-style display-7" style="color: rgba(255,255,255,0.72);">
           Click a category to expand it and browse more images in that niche.
         </p>
@@ -422,18 +426,18 @@
              data-bs-toggle="modal" data-bs-target="#portfolioModal"
              data-cat="Overviews"
              data-desc="Wide shots that show scale, flow, and the overall shape of the world."
-             data-images="assets/images/showcase/overviews/1.jpeg,
-                          assets/images/showcase/overviews/2.jpeg,
-                          assets/images/showcase/overviews/3.jpeg,
-                          assets/images/showcase/overviews/4.jpeg,
-                          assets/images/showcase/overviews/5.jpeg,
-                          assets/images/showcase/overviews/6.jpeg,
-                          assets/images/showcase/overviews/7.jpeg,
-                          assets/images/showcase/overviews/8.jpeg,
-                          assets/images/showcase/overviews/9.jpeg,
-                          assets/images/showcase/overviews/10.jpeg,
-                          assets/images/showcase/overviews/11.jpeg">
-          <img class="cat-thumb" src="assets/images/showcase/overviews/2.jpeg" alt="Overviews">
+             data-images="assets/images/showcase/overviews/1.jpg,
+                          assets/images/showcase/overviews/2.jpg,
+                          assets/images/showcase/overviews/3.jpg,
+                          assets/images/showcase/overviews/4.jpg,
+                          assets/images/showcase/overviews/5.jpg,
+                          assets/images/showcase/overviews/6.jpg,
+                          assets/images/showcase/overviews/7.jpg,
+                          assets/images/showcase/overviews/8.jpg,
+                          assets/images/showcase/overviews/9.jpg,
+                          assets/images/showcase/overviews/10.jpg,
+                          assets/images/showcase/overviews/11.jpg">
+          <img class="cat-thumb" src="assets/images/showcase/overviews/2.jpg" alt="Overviews">
           <div class="cat-body">
             <div class="cat-title">Overviews</div>
             <div class="cat-desc">Big-picture landscapes of the world scale.</div>
@@ -448,17 +452,17 @@
              data-bs-toggle="modal" data-bs-target="#portfolioModal"
              data-cat="Biomes"
              data-desc="Biome composition, transitions, density, and natural variety."
-             data-images="assets/images/showcase/biomes/1.jpeg,
-                          assets/images/showcase/biomes/2.jpeg,
-                          assets/images/showcase/biomes/3.jpeg,
-                          assets/images/showcase/biomes/4.jpeg,
-                          assets/images/showcase/biomes/5.jpeg,
-                          assets/images/showcase/biomes/6.jpeg,
-                          assets/images/showcase/biomes/7.jpeg,
-                          assets/images/showcase/biomes/8.jpeg,
-                          assets/images/showcase/biomes/9.jpeg,
-                          assets/images/showcase/biomes/10.jpeg">
-          <img class="cat-thumb" src="assets/images/showcase/biomes/2.jpeg" alt="Biomes">
+             data-images="assets/images/showcase/biomes/1.png,
+                          assets/images/showcase/biomes/2.png,
+                          assets/images/showcase/biomes/3.png,
+                          assets/images/showcase/biomes/4.png,
+                          assets/images/showcase/biomes/5.png,
+                          assets/images/showcase/biomes/6.png,
+                          assets/images/showcase/biomes/7.png,
+                          assets/images/showcase/biomes/8.png,
+                          assets/images/showcase/biomes/9.png,
+                          assets/images/showcase/biomes/10.png">
+          <img class="cat-thumb" src="assets/images/showcase/biomes/2.png" alt="Biomes">
           <div class="cat-body">
             <div class="cat-title">Biomes</div>
             <div class="cat-desc">Feel the atmospehre of custom Biomes.</div>
@@ -499,24 +503,24 @@
              data-bs-toggle="modal" data-bs-target="#portfolioModal"
              data-cat="Structures"
              data-desc="Points of interest, ruins, and builds designed to reward exploration."
-             data-images="assets/images/showcase/structures/1.jpeg,
-                          assets/images/showcase/structures/2.jpeg,
-                          assets/images/showcase/structures/3.jpeg,
-                          assets/images/showcase/structures/4.jpeg,
-                          assets/images/showcase/structures/5.jpeg,
-                          assets/images/showcase/structures/6.jpeg,
-                          assets/images/showcase/structures/7.jpeg,
-                          assets/images/showcase/structures/8.jpeg,
-                          assets/images/showcase/structures/9.jpeg,
-                          assets/images/showcase/structures/10.jpeg,
-                          assets/images/showcase/structures/11.jpeg,
-                          assets/images/showcase/structures/12.jpeg,
-                          assets/images/showcase/structures/13.jpeg,
-                          assets/images/showcase/structures/14.jpeg,
-                          assets/images/showcase/structures/15.jpeg,
-                          assets/images/showcase/structures/16.jpeg,
-                          assets/images/showcase/structures/17.jpeg">
-          <img class="cat-thumb" src="assets/images/showcase/structures/1.jpeg" alt="Structures">
+             data-images="assets/images/showcase/structures/1.png,
+                          assets/images/showcase/structures/2.png,
+                          assets/images/showcase/structures/3.png,
+                          assets/images/showcase/structures/4.png,
+                          assets/images/showcase/structures/5.png,
+                          assets/images/showcase/structures/6.png,
+                          assets/images/showcase/structures/7.png,
+                          assets/images/showcase/structures/8.png,
+                          assets/images/showcase/structures/9.png,
+                          assets/images/showcase/structures/10.png,
+                          assets/images/showcase/structures/11.png,
+                          assets/images/showcase/structures/12.png,
+                          assets/images/showcase/structures/13.png,
+                          assets/images/showcase/structures/14.png,
+                          assets/images/showcase/structures/15.png,
+                          assets/images/showcase/structures/16.png,
+                          assets/images/showcase/structures/17.png">
+          <img class="cat-thumb" src="assets/images/showcase/structures/1.png" alt="Structures">
           <div class="cat-body">
             <div class="cat-title">Structures</div>
             <div class="cat-desc">Ruins, POIs, and exploration locations.</div>
@@ -555,19 +559,19 @@
         </div>
       </div>
 
-      <!-- Underground (suggested 6th) -->
+      <!-- Underground -->
       <div class="col-12 col-md-6 col-lg-4">
         <div class="cat-card" role="button"
              data-bs-toggle="modal" data-bs-target="#portfolioModal"
              data-cat="Underground"
              data-desc="Caves, mineshafts, depth shots, and survival-focused underground flow."
-             data-images="assets/images/showcase/underground/1.jpeg,
-                          assets/images/showcase/underground/2.jpeg,
-                          assets/images/showcase/underground/3.jpeg,
-                          assets/images/showcase/underground/4.jpeg,
-                          assets/images/showcase/underground/5.jpeg,
-                          assets/images/showcase/underground/6.jpeg">
-          <img class="cat-thumb" src="assets/images/showcase/underground/4.jpeg" alt="Underground">
+             data-images="assets/images/showcase/underground/1.png,
+                          assets/images/showcase/underground/2.png,
+                          assets/images/showcase/underground/3.png,
+                          assets/images/showcase/underground/4.png,
+                          assets/images/showcase/underground/5.png,
+                          assets/images/showcase/underground/6.png">
+          <img class="cat-thumb" src="assets/images/showcase/underground/4.png" alt="Underground">
           <div class="cat-body">
             <div class="cat-title">Underground</div>
             <div class="cat-desc">Caves, depth, and hidden spaces.</div>
@@ -606,6 +610,30 @@
         <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Ask / Commission</a>
       </div>
 
+    </div>
+  </div>
+</div>
+
+<!-- ===== Lightbox modal (enlarge clicked image) ===== -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-md-down modal-xl modal-dialog-centered">
+    <div class="modal-content" style="background: rgba(10,16,22,0.98); border: 1px solid rgba(255,255,255,0.12);">
+      <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.10);">
+        <h5 class="modal-title" id="lightboxTitle" style="color:#fff;font-weight:800;">Image</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                style="filter: invert(1); opacity: 0.85;"></button>
+      </div>
+
+      <div class="modal-body p-2 p-md-3" style="display:flex; align-items:center; justify-content:center;">
+        <img id="lightboxImg" src="" alt=""
+             style="max-width: 100%; max-height: 80vh; object-fit: contain; border-radius: 14px; border: 1px solid rgba(255,255,255,0.10);">
+      </div>
+
+      <div class="modal-footer" style="border-top: 1px solid rgba(255,255,255,0.10); justify-content: space-between;">
+        <button type="button" class="btn btn-info-outline display-4" id="lightboxPrev">← Prev</button>
+        <div class="mbr-fonts-style display-7" id="lightboxCounter" style="color: rgba(255,255,255,0.70);"></div>
+        <button type="button" class="btn btn-info-outline display-4" id="lightboxNext">Next →</button>
+      </div>
     </div>
   </div>
 </div>
@@ -668,13 +696,13 @@
                                 The full gallery lives on ArtStation, with additional map releases on Patreon.
                               </p>
                               <div class="mt-3 text-center">
-                            <a href="https://www.artstation.com/zhyrr"
-                            target="_blank"
-                            class="btn btn-sm btn-primary">
-                                Check out my full Portfolio →
-                            </a>
-                        </div>
-                            
+                                <a href="https://www.artstation.com/zhyrr"
+                                   target="_blank"
+                                   class="btn btn-sm btn-primary">
+                                  Check out my full Portfolio →
+                                </a>
+                              </div>
+
                           </div>
                       </div>
                   </div>
@@ -759,47 +787,91 @@
 <input name="animation" type="hidden">
 
 <script>
-  // Build modal gallery from clicked card data
   document.addEventListener("DOMContentLoaded", () => {
-    const modalEl = document.getElementById("portfolioModal");
-    if (!modalEl) return;
+    const portfolioModalEl = document.getElementById("portfolioModal");
+    const lightboxModalEl  = document.getElementById("lightboxModal");
+    if (!portfolioModalEl || !lightboxModalEl) return;
 
     const titleEl = document.getElementById("portfolioModalTitle");
     const descEl  = document.getElementById("portfolioModalDesc");
     const gridEl  = document.getElementById("portfolioModalGrid");
 
-    modalEl.addEventListener("show.bs.modal", (event) => {
+    const lightboxTitle   = document.getElementById("lightboxTitle");
+    const lightboxImg     = document.getElementById("lightboxImg");
+    const lightboxCounter = document.getElementById("lightboxCounter");
+    const btnPrev         = document.getElementById("lightboxPrev");
+    const btnNext         = document.getElementById("lightboxNext");
+
+    const lightbox = new bootstrap.Modal(lightboxModalEl, { keyboard: true });
+
+    let currentImgs = [];
+    let currentCat  = "Image";
+    let currentIdx  = 0;
+
+    function openLightbox(index) {
+      if (!currentImgs.length) return;
+      currentIdx = Math.max(0, Math.min(index, currentImgs.length - 1));
+
+      lightboxTitle.textContent = currentCat;
+      lightboxImg.src = currentImgs[currentIdx];
+      lightboxImg.alt = `${currentCat} ${currentIdx + 1}`;
+
+      lightboxCounter.textContent = `${currentIdx + 1} / ${currentImgs.length}`;
+
+      btnPrev.disabled = currentIdx === 0;
+      btnNext.disabled = currentIdx === currentImgs.length - 1;
+
+      lightbox.show();
+    }
+
+    function go(delta) {
+      openLightbox(currentIdx + delta);
+    }
+
+    btnPrev.addEventListener("click", () => go(-1));
+    btnNext.addEventListener("click", () => go(+1));
+
+    // Keyboard navigation while lightbox is open
+    document.addEventListener("keydown", (e) => {
+      if (!lightboxModalEl.classList.contains("show")) return;
+      if (e.key === "ArrowLeft")  go(-1);
+      if (e.key === "ArrowRight") go(+1);
+    });
+
+    // Build modal gallery from clicked category card data
+    portfolioModalEl.addEventListener("show.bs.modal", (event) => {
       const trigger = event.relatedTarget;
       if (!trigger) return;
 
-      const cat  = trigger.getAttribute("data-cat") || "Portfolio";
-      const desc = trigger.getAttribute("data-desc") || "";
-      const imgs = (trigger.getAttribute("data-images") || "").split(",").map(s => s.trim()).filter(Boolean);
+      currentCat  = trigger.getAttribute("data-cat") || "Portfolio";
+      const desc  = trigger.getAttribute("data-desc") || "";
+      currentImgs = (trigger.getAttribute("data-images") || "")
+        .split(",")
+        .map(s => s.trim())
+        .filter(Boolean);
 
-      titleEl.textContent = cat;
-      descEl.textContent = desc;
+      titleEl.textContent = currentCat;
+      descEl.textContent  = desc;
 
-      // Clear grid
       gridEl.innerHTML = "";
 
-      // If you want the first image to be a larger hero:
-      if (imgs.length) {
+      // Hero image (index 0)
+      if (currentImgs.length) {
         const hero = document.createElement("div");
         hero.className = "gallery-item gallery-hero";
-        hero.innerHTML = `<img src="${imgs[0]}" alt="${cat} hero">`;
+        hero.innerHTML = `<img src="${currentImgs[0]}" alt="${currentCat} hero" data-idx="0">`;
         gridEl.appendChild(hero);
       }
 
-      // Add the rest (including first again if you want—here we skip index 0)
-      for (let i = 1; i < imgs.length; i++) {
+      // Rest
+      for (let i = 1; i < currentImgs.length; i++) {
         const item = document.createElement("div");
         item.className = "gallery-item";
-        item.innerHTML = `<img src="${imgs[i]}" alt="${cat} image ${i+1}">`;
+        item.innerHTML = `<img src="${currentImgs[i]}" alt="${currentCat} image ${i+1}" data-idx="${i}">`;
         gridEl.appendChild(item);
       }
 
-      // If a category has too few images, pad with placeholders (optional)
-      if (imgs.length < 4) {
+      if (currentImgs.length < 4) {
         const note = document.createElement("div");
         note.className = "mbr-fonts-style display-7";
         note.style.color = "rgba(255,255,255,0.65)";
@@ -807,6 +879,15 @@
         note.textContent = "More images coming soon for this category.";
         gridEl.appendChild(note);
       }
+    });
+
+    // Click-to-enlarge (event delegation)
+    gridEl.addEventListener("click", (e) => {
+      const img = e.target.closest("img");
+      if (!img) return;
+
+      const idx = parseInt(img.getAttribute("data-idx"), 10);
+      if (Number.isFinite(idx)) openLightbox(idx);
     });
   });
 </script>
