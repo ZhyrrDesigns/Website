@@ -48,6 +48,161 @@
   
   
 <style>
+/* ===== Commission Pipeline Section ===== */
+
+.commission {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.commission::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.32);
+  z-index: 0;
+}
+
+.commission .container {
+  position: relative;
+  z-index: 1;
+}
+
+.commission-card {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(10, 16, 22, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 2.8rem 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.55);
+}
+
+.commission-title {
+  text-align: center;
+  margin-bottom: 0.65rem;
+  font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  line-height: 1.1;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.commission-sub {
+  text-align: center;
+  color: rgba(255,255,255,0.80);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0.8rem auto 0;
+  max-width: 840px;
+}
+
+.commission-divider {
+  width: 90px;
+  height: 3px;
+  margin: 0.9rem auto 1.6rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1rem;
+  margin-top: 1.4rem;
+}
+
+.pipeline-step {
+  grid-column: span 6;
+  padding: 1.25rem 1.25rem 1.15rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+}
+
+.pipeline-top {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 0.55rem;
+}
+
+.pipeline-number {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  font-weight: 700;
+}
+
+.pipeline-step h5 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.08rem;
+}
+
+.pipeline-step p {
+  margin: 0.4rem 0 0;
+  color: rgba(255,255,255,0.88);
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+.commission-cta {
+  margin-top: 1.6rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.commission-cta .contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.92);
+  text-decoration: none;
+}
+
+.commission-cta .contact-pill:hover {
+  background: rgba(255,255,255,0.12);
+  color: #fff;
+  text-decoration: none;
+}
+
+.commission-note {
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,0.70);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .pipeline-step { grid-column: span 12; }
+}
+
+@media (max-width: 768px) {
+  .commission { padding: 3.5rem 0; }
+  .commission-card { padding: 2.1rem 1.6rem; }
+}
+
+
   #slideshow-1 {
     background-color: rgb(1, 17, 26);
   }
@@ -602,6 +757,96 @@
     </div>
   </div>
 </section>
+
+
+<section data-bs-version="5.1" class="commission cid-commission-pipeline" id="commission-pipeline">
+  <div class="mbr-overlay" style="opacity: 0.65; background-color: rgb(1, 17, 26);"></div>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <div class="commission-card">
+
+          <div class="commission-title">Commission Pipeline</div>
+          <div class="commission-divider"></div>
+          <p class="commission-sub">
+            Want a world built specifically for your server, SMP, or friend group? Here’s how we go from idea → playable map,
+            with clear steps, frequent updates, and a final result that matches what you imagine.
+          </p>
+
+          <div class="pipeline-grid">
+
+            <div class="pipeline-step">
+              <div class="pipeline-top">
+                <div class="pipeline-number">1</div>
+                <h5>Idea & Direction</h5>
+              </div>
+              <p>
+                We talk about your vision and I ask the important questions: map size vs. player count, the vibe you want,
+                biome spacing (some biomes work better farther apart), progression, landmarks, and any “must-have” features.
+                I’ll share honest suggestions, but the goal is always the same: <strong>build what you envision</strong>.
+              </p>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-top">
+                <div class="pipeline-number">2</div>
+                <h5>Planning & Downpayment</h5>
+              </div>
+              <p>
+                Once the plan is locked in, I ask for a <strong>50% downpayment</strong> to secure the slot and protect my time.
+                After that, I start building.
+              </p>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-top">
+                <div class="pipeline-number">3</div>
+                <h5>Build Phase (Updates & Feedback)</h5>
+              </div>
+              <p>
+                I’ll send frequent progress updates and screenshots so you can react early—what you love, what you want adjusted,
+                and what should be pushed further. This keeps us aligned and prevents surprises at the end.
+              </p>
+            </div>
+
+            <div class="pipeline-step">
+              <div class="pipeline-top">
+                <div class="pipeline-number">4</div>
+                <h5>Final Preview, Delivery & Small Tweaks</h5>
+              </div>
+              <p>
+                When the world is ready, I send in-game screenshots as a final preview. You complete the remaining
+                <strong>50%</strong>, and I deliver the map. After you test it, you can request <strong>small finishing touches</strong>
+                so everything feels perfect.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="commission-cta">
+            <a class="contact-pill" href="mailto:info@zhyrrdesigns.com">
+              <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
+              info@zhyrrdesigns.com
+            </a>
+
+            <a class="contact-pill" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
+              <span class="mbr-iconfont socicon-discord socicon"></span>
+              Discord: <strong>Zhyrr</strong>
+            </a>
+
+            <div class="commission-note">
+              Quick message is enough — tell me your rough idea + preferred map size, and we’ll take it from there.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 
