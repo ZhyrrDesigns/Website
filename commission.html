@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <!-- Social -->
   <meta name="twitter:card" content="summary_large_image"/>
@@ -13,7 +13,7 @@
   <meta name="twitter:title" content="Commissions | Zhyrr Designs">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/512xnewhypixel.png" type="image/x-icon">
-  <meta name="description" content="Commission a handcrafted Minecraft survival world by Zhyrr Designs. Clear pipeline, transparent pricing estimates, and frequent progress updates.">
+  <meta name="description" content="Commission a handcrafted Minecraft survival world by Zhyrr Designs. Clear process, transparent pricing estimates, and frequent progress updates.">
 
   <title>Commissions | Zhyrr Designs</title>
 
@@ -39,137 +39,30 @@
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 
   <style>
-    /* ===== Page tone ===== */
+    /* Page base */
     body { background-color: rgb(1, 17, 26); }
-    .card.mb-3 { padding: 0px 1rem; } /* keep your accordion tweak */
+    .card.mb-3 { padding: 0px 1rem; }
 
-    /* ===== Reusable section spacing ===== */
-    .section-pad { background-color: rgb(1, 17, 26); padding: 4.5rem 0; }
+    /* Section rhythm */
+    .sec { padding: 4.8rem 0; background: rgb(1, 17, 26); }
+    .sec-alt { padding: 4.8rem 0; background: rgba(255,255,255,0.02); }
+    .wrap { max-width: 1120px; margin: 0 auto; }
 
-    /* ===== Hero tweaks ===== */
-    .hero-subtext { color: rgba(255,255,255,0.86); line-height: 1.85; }
-    .hero-proof { color: rgba(255,255,255,0.70); margin-top: 0.65rem; line-height: 1.65; }
-
-    /* ===== Glass / backdrop section ===== */
-    .commission {
-      position: relative;
-      overflow: hidden;
-      padding: 4.8rem 0;
-      background-color: rgb(1, 17, 26);
-    }
-    .commission::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background-image:url("https://zhyrrdesigns.com/assets/images/showcase/overviews/2.jpg");
-      background-size:cover;
-      background-position:center;
-      filter: blur(4px) brightness(0.60);
-      transform: scale(1.03);
-      z-index:0;
-    }
-    .commission .container { position: relative; z-index: 1; }
-
-    .commission-card{
-      max-width: 1120px;
-      margin: 0 auto;
-      background: rgba(10, 16, 22, 0.72);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-radius: 22px;
-      padding: 2.6rem 3rem;
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      box-shadow: 0 26px 70px rgba(0, 0, 0, 0.55);
-    }
-    @media (max-width: 768px){
-      .commission-card{ padding: 2.0rem 1.5rem; }
-    }
-
-    .commission-title{
-      text-align:center;
-      margin-bottom: 0.35rem;
+    /* Typography */
+    .h-title {
       font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+      color: #fff;
+      letter-spacing: 0.4px;
       line-height: 1.1;
-      color: #fff;
-      letter-spacing: 0.5px;
     }
-    .commission-sub{
-      text-align:center;
-      color: rgba(255,255,255,0.80);
-      font-size: 1.05rem;
-      line-height: 1.75;
-      margin: 0.8rem auto 0;
-      max-width: 920px;
-    }
-    .commission-divider{
-      width: 90px;
-      height: 3px;
-      margin: 0.85rem auto 1.35rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.45);
-    }
+    .sub { color: rgba(255,255,255,0.78); line-height: 1.8; }
+    .muted { color: rgba(255,255,255,0.65); }
 
-    /* ===== Cards / grids ===== */
-    .grid-12 {
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1rem;
-      align-items: stretch;
-    }
-    .panel-card{
-      border-radius: 18px;
-      padding: 1.25rem 1.25rem 1.15rem;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      height: 100%;
-      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
-    }
-    .panel-card:hover{
-      transform: translateY(-4px);
-      border-color: rgba(255,255,255,0.18);
-      background: rgba(255,255,255,0.08);
-    }
-    .panel-top{
-      display:flex;
-      align-items:center;
-      gap: 0.9rem;
-      margin-bottom: 0.55rem;
-    }
-    .panel-badge{
-      width: 38px;
-      height: 38px;
-      display:grid;
-      place-items:center;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #fff;
-      font-weight: 800;
-      flex: 0 0 auto;
-    }
-    .panel-card h5{
-      margin: 0;
-      color:#fff;
-      font-size: 1.08rem;
-    }
-    .panel-card p{
-      margin: 0.35rem 0 0;
-      color: rgba(255,255,255,0.88);
-      line-height: 1.75;
-      font-size: 1rem;
-    }
+    /* Hero */
+    .hero-sub { color: rgba(255,255,255,0.86); line-height: 1.85; }
+    .hero-chip-row { display:flex; flex-wrap:wrap; gap: 0.6rem; margin-top: 1rem; }
 
-    /* ===== Jump pills / contact pills ===== */
-    .pill-row{
-      margin-top: 1.1rem;
-      display:flex;
-      flex-wrap: wrap;
-      gap: 0.65rem;
-      justify-content:center;
-      align-items:center;
-    }
-    .pill{
+    .chip {
       display:inline-flex;
       align-items:center;
       gap: 0.55rem;
@@ -179,158 +72,268 @@
       border: 1px solid rgba(255,255,255,0.12);
       color: rgba(255,255,255,0.92);
       text-decoration:none;
-      transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+      transition: transform 160ms ease, background 160ms ease, border-color 160ms ease;
+      white-space: nowrap;
     }
-    .pill:hover{
+    .chip:hover {
+      transform: translateY(-2px);
       background: rgba(255,255,255,0.12);
       border-color: rgba(255,255,255,0.18);
-      transform: translateY(-2px);
-      color:#fff;
+      color: #fff;
       text-decoration:none;
     }
 
-    .note-muted{
-      text-align:center;
-      color: rgba(255,255,255,0.70);
-      font-size: 0.95rem;
-      line-height: 1.65;
-      margin-top: 0.65rem;
+    /* Premium card */
+    .card-glass {
+      background: rgba(10, 16, 22, 0.72);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 22px;
+      box-shadow: 0 24px 70px rgba(0,0,0,0.55);
+    }
+    .card-pad { padding: 2.2rem 2.3rem; }
+    @media (max-width: 768px){
+      .card-pad { padding: 1.7rem 1.4rem; }
     }
 
-    /* ===== Pricing ===== */
-    .pricing-wrap{
+    /* Section headings */
+    .sec-head { text-align:center; margin-bottom: 1.7rem; }
+    .sec-head h2 {
+      margin: 0 0 0.6rem;
+      font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+      color:#fff;
+      font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+    .sec-head p { margin:0; color: rgba(255,255,255,0.72); line-height: 1.7; }
+
+    .divider {
+      width: 90px;
+      height: 3px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.45);
+      margin: 0.9rem auto 0;
+    }
+
+    /* Stat strip */
+    .stats {
       display:grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    .stat {
+      grid-column: span 4;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 1.1rem 1.15rem;
+    }
+    .stat .k {
+      color:#fff;
+      font-weight: 900;
+      font-size: 1.35rem;
+      letter-spacing: 0.2px;
+      line-height: 1.2;
+    }
+    .stat .t { color: rgba(255,255,255,0.72); margin-top: 0.25rem; line-height: 1.55; }
+    @media (max-width: 992px){
+      .stat { grid-column: span 12; }
+    }
+
+    /* Brief form */
+    .brief-grid {
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
       gap: 1rem;
       margin-top: 1.3rem;
-      align-items: start;
+    }
+    .brief-box {
+      grid-column: span 6;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 1.15rem 1.2rem;
+    }
+    .brief-top {
+      display:flex;
+      align-items:center;
+      gap: 0.75rem;
+      margin-bottom: 0.4rem;
+    }
+    .icon-bubble {
+      width: 38px; height: 38px;
+      display:grid; place-items:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: #fff;
+      flex: 0 0 auto;
+    }
+    .brief-box h5 { margin:0; color:#fff; font-size: 1.08rem; }
+    .brief-box p { margin:0.35rem 0 0; color: rgba(255,255,255,0.85); line-height: 1.75; }
+    .brief-template {
+      margin-top: 1.1rem;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      padding-top: 1.1rem;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.7;
+    }
+    .template-box {
+      margin-top: 0.7rem;
+      border-radius: 16px;
+      background: rgba(0,0,0,0.28);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 0.95rem 1rem;
+      color: rgba(255,255,255,0.92);
+      font-weight: 700;
+      overflow-wrap: anywhere;
     }
     @media (max-width: 992px){
-      .pricing-wrap{ grid-template-columns: 1fr; }
+      .brief-box { grid-column: span 12; }
     }
-    .pricing-head{
-      display:flex;
-      align-items:center;
-      justify-content: space-between;
-      gap: 0.75rem;
-      margin-bottom: 0.65rem;
+
+    /* Pricing layout */
+    .pricing-grid {
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+      align-items: stretch;
     }
-    .pricing-title{
-      display:flex;
-      align-items:center;
-      gap: 0.7rem;
-      color:#fff;
-      margin:0;
-      font-size: 1.1rem;
+    .price-card {
+      grid-column: span 4;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 1.25rem 1.25rem 1.15rem;
+      height: 100%;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
     }
-    .pricing-dot{
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.55);
-      box-shadow: 0 0 0 4px rgba(255,255,255,0.06);
+    .price-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.08);
     }
-    .pricing-badge{
+    .price-card .tag {
       display:inline-flex;
-      align-items:center;
-      gap: 0.45rem;
-      padding: 0.32rem 0.65rem;
+      padding: 0.35rem 0.7rem;
       border-radius: 999px;
       background: rgba(255,255,255,0.08);
       border: 1px solid rgba(255,255,255,0.12);
       color: rgba(255,255,255,0.85);
-      font-size: 0.85rem;
-      white-space: nowrap;
+      font-size: 0.86rem;
+      font-weight: 700;
     }
-    .price-list{ list-style:none; padding:0; margin: 0.55rem 0 0; }
-    .price-row{
+    .price-card h5 { margin: 0.8rem 0 0.25rem; color:#fff; font-weight: 900; }
+    .price-card .p { color: rgba(255,255,255,0.76); line-height: 1.65; margin: 0; }
+    .price {
+      margin-top: 0.9rem;
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 0.2px;
+    }
+    .price small { font-size: 0.95rem; color: rgba(255,255,255,0.70); font-weight: 700; }
+
+    .price-table {
+      margin-top: 1.3rem;
+      border-radius: 18px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(10,16,22,0.65);
+    }
+    .price-row {
       display:flex;
       justify-content: space-between;
-      align-items: baseline;
-      padding: 0.62rem 0;
+      gap: 1rem;
+      padding: 0.85rem 1.1rem;
       border-bottom: 1px solid rgba(255,255,255,0.08);
+      align-items: baseline;
     }
-    .price-row:last-child{ border-bottom: 0; }
-    .price-left{ display:flex; flex-direction:column; gap: 0.15rem; }
-    .price-size{ color: rgba(255,255,255,0.92); font-weight: 800; letter-spacing: 0.2px; }
-    .price-sub{ color: rgba(255,255,255,0.65); font-size: 0.9rem; line-height: 1.2; }
-    .price-eur{ color:#fff; font-weight: 900; letter-spacing: 0.2px; }
+    .price-row:last-child { border-bottom: 0; }
+    .price-row .l { color: rgba(255,255,255,0.92); font-weight: 900; }
+    .price-row .s { color: rgba(255,255,255,0.65); font-size: 0.92rem; margin-top: 0.15rem; }
+    .price-row .r { color:#fff; font-weight: 900; white-space: nowrap; }
 
-    .pricing-notes{
-      margin-top: 0.95rem;
-      padding-top: 0.95rem;
+    .pricing-notes {
+      margin-top: 1.2rem;
+      padding-top: 1.1rem;
       border-top: 1px solid rgba(255,255,255,0.10);
-      color: rgba(255,255,255,0.74);
-      font-size: 0.95rem;
-      line-height: 1.65;
-    }
-    .pricing-notes strong{ color: rgba(255,255,255,0.92); font-weight: 800; }
-    .note-line{ display:flex; gap: 0.6rem; margin-top: 0.55rem; }
-    .note-bullet{
-      width: 8px;
-      height: 8px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.35);
-      margin-top: 0.45rem;
-      flex: 0 0 auto;
-    }
-
-    /* ===== Proof section (reviews carousel + yt grid) ===== */
-    #proof { background-color: rgb(1, 17, 26); padding: 4.5rem 0; }
-    .proof-wrap{ max-width: 1120px; margin: 0 auto; }
-
-    .proof-head{
-      text-align:center;
-      margin-bottom: 1.5rem;
-    }
-    .proof-head h2{
-      color:#fff;
-      margin: 0 0 0.5rem;
-      font-family: "Fredoka One", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      font-size: clamp(1.5rem, 2.2vw, 2.1rem);
-    }
-    .proof-head p{
       color: rgba(255,255,255,0.72);
-      margin:0;
       line-height: 1.7;
-      font-size: 1.02rem;
+    }
+    .bullet {
+      display:flex; gap: 0.6rem; margin-top: 0.6rem;
+    }
+    .dot {
+      width: 8px; height: 8px; border-radius: 999px;
+      background: rgba(255,255,255,0.35);
+      margin-top: 0.45rem; flex: 0 0 auto;
     }
 
-    .review-carousel{
-      border-radius: 22px;
-      overflow: hidden;
+    @media (max-width: 992px){
+      .price-card { grid-column: span 12; }
+    }
+
+    /* Process timeline */
+    .timeline {
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+    .step {
+      grid-column: span 3;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(10, 16, 22, 0.70);
+      padding: 1.1rem 1.1rem 1.05rem;
+      height: 100%;
+    }
+    .step .n {
+      width: 38px; height: 38px;
+      display:grid; place-items:center;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      color:#fff;
+      font-weight: 900;
+      margin-bottom: 0.55rem;
+    }
+    .step h5 { margin:0; color:#fff; font-size: 1.06rem; }
+    .step p { margin: 0.35rem 0 0; color: rgba(255,255,255,0.84); line-height: 1.72; }
+    @media (max-width: 992px){
+      .step { grid-column: span 12; }
+    }
+
+    /* Proof */
+    .review-shell {
+      border-radius: 22px;
+      overflow:hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(10,16,22,0.70);
       box-shadow: 0 18px 60px rgba(0,0,0,0.45);
     }
-    .review-slide{ padding: 1.35rem; }
-    .review-card{
+    .review-slide { padding: 1.35rem; }
+    .review-card {
       display:grid;
       grid-template-columns: 160px 1fr;
       gap: 1.1rem;
       align-items: start;
     }
-    .review-thumb{
-      width: 100%;
+    .thumb {
       border-radius: 16px;
-      overflow: hidden;
+      overflow:hidden;
       border: 1px solid rgba(255,255,255,0.12);
       background: rgba(1,17,26,0.65);
     }
-    .review-thumb img{
-      width: 100%;
-      height: 100%;
+    .thumb img {
+      width:100%;
+      height:100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
       display:block;
     }
-    .review-quote{
-      color: rgba(255,255,255,0.88);
-      line-height: 1.85;
-      margin: 0;
-      font-size: 1.02rem;
-    }
-    .review-meta{
+    .quote { color: rgba(255,255,255,0.88); line-height: 1.85; margin:0; font-size: 1.02rem; }
+    .meta {
       margin-top: 0.9rem;
       padding-top: 0.9rem;
       border-top: 1px solid rgba(255,255,255,0.10);
@@ -338,75 +341,75 @@
       justify-content: space-between;
       gap: 0.75rem;
       flex-wrap: wrap;
-      color: rgba(255,255,255,0.72);
+      color: rgba(255,255,255,0.70);
       font-size: 0.95rem;
     }
-    .review-meta strong{ color: rgba(255,255,255,0.95); }
+    .meta strong { color: rgba(255,255,255,0.95); }
+
     .review-controls .carousel-control-prev,
-    .review-controls .carousel-control-next{ width: 4.2rem; }
+    .review-controls .carousel-control-next { width: 4.2rem; }
     .review-controls .carousel-control-prev-icon,
-    .review-controls .carousel-control-next-icon{
+    .review-controls .carousel-control-next-icon {
       filter: drop-shadow(0 10px 18px rgba(0,0,0,0.55));
     }
-    .review-dots{ margin-top: 0.9rem; }
-    .review-dots .carousel-indicators{
+
+    .review-dots { margin-top: 0.9rem; }
+    .review-dots .carousel-indicators {
       position: static;
       margin: 0;
       gap: 8px;
     }
     .review-dots .carousel-indicators [data-bs-target]{
-      width: 10px;
-      height: 10px;
+      width: 10px; height: 10px;
       border-radius: 999px;
       border: 0;
       opacity: 0.35;
     }
-    .review-dots .carousel-indicators .active{ opacity: 0.85; }
+    .review-dots .carousel-indicators .active { opacity: 0.85; }
 
     @media (max-width: 768px){
-      .review-card{ grid-template-columns: 1fr; }
-      .review-thumb img{ aspect-ratio: 16 / 9; }
+      .review-card { grid-template-columns: 1fr; }
+      .thumb img { aspect-ratio: 16 / 9; }
     }
 
-    /* YouTuber grid */
-    .yt-grid{
+    /* Videos */
+    .yt-grid {
       display:grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 1rem;
-      margin-top: 1.4rem;
+      margin-top: 1.3rem;
     }
-    .yt-card{
+    .yt-card {
       grid-column: span 6;
       border-radius: 18px;
       overflow:hidden;
       border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(10, 16, 22, 0.70);
+      background: rgba(10,16,22,0.70);
       box-shadow: 0 18px 60px rgba(0,0,0,0.45);
       transition: transform 160ms ease, border-color 160ms ease;
     }
-    .yt-card:hover{ transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
-    .yt-embed{ width:100%; aspect-ratio: 16/9; display:block; border:0; }
-    .yt-body{ padding: 1.05rem 1.15rem 1.1rem; }
-    .yt-title{ color:#fff; margin:0 0 0.25rem; font-weight: 900; font-size: 1.05rem; }
-    .yt-sub{ color: rgba(255,255,255,0.70); margin:0; line-height: 1.55; font-size: 0.95rem; }
+    .yt-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
+    .yt-embed { width:100%; aspect-ratio: 16/9; border:0; display:block; }
+    .yt-body { padding: 1.05rem 1.15rem 1.1rem; }
+    .yt-title { color:#fff; margin:0 0 0.25rem; font-weight: 900; font-size: 1.05rem; }
+    .yt-sub { color: rgba(255,255,255,0.70); margin:0; line-height: 1.55; font-size: 0.95rem; }
     @media (max-width: 992px){
-      .yt-card{ grid-column: span 12; }
+      .yt-card { grid-column: span 12; }
     }
 
-    /* ===== Mini FAQ (keep your dark tuning) ===== */
-    #mini-faq { background-color: rgb(1, 17, 26); padding: 4.5rem 0; }
-    #mini-faq .card{ background: rgba(10,16,22,0.70); border: 1px solid rgba(255,255,255,0.10); }
+    /* FAQ styling */
+    #mini-faq { background-color: rgb(1, 17, 26); padding: 4.8rem 0; }
+    #mini-faq .card { background: rgba(10,16,22,0.70); border: 1px solid rgba(255,255,255,0.10); }
     #mini-faq .panel-text,
     #mini-faq .panel-title-edit,
     #mini-faq .mbr-iconfont,
     #mini-faq strong { color: #fff !important; }
-    #mini-faq .panel-text{ color: rgba(255,255,255,0.80) !important; }
+    #mini-faq .panel-text { color: rgba(255,255,255,0.80) !important; }
   </style>
 </head>
 
 <body>
 
-<!-- ===== NAV ===== -->
 <section data-bs-version="5.1" class="menu menu2 cid-tkbL8n4vab" once="menu" id="menu2-16">
   <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
     <div class="container-fluid">
@@ -459,7 +462,6 @@
   </nav>
 </section>
 
-<!-- ===== HERO ===== -->
 <section data-bs-version="5.1" class="header14 cid-tjqpRpO1sc mbr-fullscreen mbr-parallax-background" id="header14-commissions">
   <div class="mbr-overlay" style="opacity: 0.82; background-color: rgb(1, 17, 26);"></div>
 
@@ -475,96 +477,29 @@
             <strong>Commissions</strong>
           </h1>
 
-          <p class="mbr-text mbr-fonts-style display-7 hero-subtext">
+          <p class="mbr-text mbr-fonts-style display-7 hero-sub">
             Want a world made specifically for your server, SMP, or friend group?
-            I create handcrafted Minecraft survival worlds designed for long-term play, meaningful exploration,
-            and natural progression — with frequent updates and clear delivery steps.
+            I create handcrafted Minecraft survival worlds designed for long term play, meaningful exploration,
+            and natural progression, with frequent updates and clear delivery.
             <br><br>
-            Reach out through Discord or email and tell me your rough idea + preferred map size.
+            Message me with your idea and preferred map size to get a clear quote.
           </p>
 
           <div class="mbr-section-btn mt-3">
             <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Join Discord</a>
-            <a class="btn btn-info-outline display-4" href="mailto:info@zhyrrdesigns.com">Email Me &gt;</a>
+            <a class="btn btn-info-outline display-4" href="mailto:info@zhyrrdesigns.com">Email Me</a>
           </div>
 
-          <div class="hero-proof mbr-text mbr-fonts-style display-7">
-            Proof included below: client reviews + videos made on commissioned worlds.
+          <div class="hero-chip-row">
+            <a class="chip" href="#brief">What to send</a>
+            <a class="chip" href="#pricing">Pricing</a>
+            <a class="chip" href="#process">Process</a>
+            <a class="chip" href="#proof">Proof</a>
+            <a class="chip" href="#mini-faq">FAQ</a>
           </div>
 
-          <div class="pill-row" style="justify-content: flex-start;">
-            <a class="pill" href="#commission-brief">What to send</a>
-            <a class="pill" href="#pricing">Pricing</a>
-            <a class="pill" href="#pipeline">Pipeline</a>
-            <a class="pill" href="#proof">Proof</a>
-            <a class="pill" href="#mini-faq">FAQ</a>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== QUICK BRIEF ===== -->
-<section class="commission" id="commission-brief">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div class="commission-card">
-          <div class="commission-title">What to send me</div>
-          <div class="commission-divider"></div>
-          <p class="commission-sub">
-            If you message me with the points below, I can reply with a clean quote + timeline right away.
-          </p>
-
-          <div class="grid-12" style="margin-top: 1.3rem;">
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">✓</div>
-                <h5>Basics</h5>
-              </div>
-              <p><strong>Map size</strong> (1k–15k+), <strong>player count</strong>, and your <strong>server style</strong> (SMP, hardcore, chill, etc.).</p>
-            </div>
-
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">✓</div>
-                <h5>Vibe & Biomes</h5>
-              </div>
-              <p>Theme you want (realistic/fantasy/etc.), must-have biomes, and anything you want to avoid.</p>
-            </div>
-
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">✓</div>
-                <h5>Deadline</h5>
-              </div>
-              <p>If you have a launch date, tell me. If not, we’ll pick a comfortable timeline based on size + detail.</p>
-            </div>
-
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">✓</div>
-                <h5>Platform</h5>
-              </div>
-              <p>Java / Bedrock, version, and any technical requirements (world height, borders, plugins, etc.).</p>
-            </div>
-          </div>
-
-          <div class="note-muted">
-            Copy/paste template: <strong>“Size: __ | Players: __ | Vibe: __ | Must-have biomes: __ | Deadline: __ | Java/Bedrock: __”</strong>
-          </div>
-
-          <div class="pill-row">
-            <a class="pill" href="mailto:info@zhyrrdesigns.com">
-              <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
-              info@zhyrrdesigns.com
-            </a>
-            <a class="pill" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
-              <span class="mbr-iconfont socicon-discord socicon"></span>
-              Discord: <strong>Zhyrr</strong>
-            </a>
+          <div class="mbr-text mbr-fonts-style display-7 muted" style="margin-top: 0.9rem; line-height: 1.65;">
+            Professional workflow, frequent updates, and a survival first layout that plays well for real servers.
           </div>
         </div>
       </div>
@@ -572,323 +507,346 @@
   </div>
 </section>
 
-<!-- ===== PRICING ===== -->
-<section class="commission" id="pricing">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div class="commission-card">
-          <div class="commission-title">Pricing (Estimates)</div>
-          <div class="commission-divider"></div>
-          <p class="commission-sub">
-            Size-based estimates. Final pricing can change depending on complexity, deadlines, and extra custom requirements.
-          </p>
+<section class="sec" id="trust">
+  <div class="container wrap">
+    <div class="sec-head">
+      <h2>What you can expect</h2>
+      <p>Clear communication, a strong survival flow, and a world that feels handcrafted from spawn to end game.</p>
+      <div class="divider"></div>
+    </div>
 
-          <div class="pricing-wrap">
+    <div class="card-glass card-pad">
+      <div class="stats">
+        <div class="stat">
+          <div class="k">Frequent updates</div>
+          <div class="t">Progress screenshots and check ins so you stay in control of the direction.</div>
+        </div>
+        <div class="stat">
+          <div class="k">Survival first</div>
+          <div class="t">Biome spacing, resources, and terrain designed for long sessions and real progression.</div>
+        </div>
+        <div class="stat">
+          <div class="k">Delivery ready</div>
+          <div class="t">Clean handoff, final preview, and small finishing tweaks after you test.</div>
+        </div>
+      </div>
 
-            <!-- Left: quick picks -->
-            <div class="panel-card">
-              <div class="pricing-head">
-                <h5 class="pricing-title"><span class="pricing-dot"></span>Quick picks</h5>
-                <span class="pricing-badge">Most common</span>
-              </div>
+      <div style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.10); padding-top: 1.1rem;">
+        <div class="d-flex flex-wrap gap-2 justify-content-center">
+          <a class="chip" href="mailto:info@zhyrrdesigns.com">
+            <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
+            info@zhyrrdesigns.com
+          </a>
+          <a class="chip" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
+            <span class="mbr-iconfont socicon-discord socicon"></span>
+            Discord: <strong>Zhyrr</strong>
+          </a>
+        </div>
+      </div>
 
-              <div class="grid-12" style="gap: 0.8rem;">
-                <div class="panel-card" style="grid-column: span 12; padding: 1rem 1.05rem;">
-                  <div style="display:flex; justify-content:space-between; gap: 0.75rem; align-items: baseline;">
-                    <div>
-                      <div class="price-size">2k — Compact SMP</div>
-                      <div class="price-sub">Great for tight progression</div>
-                    </div>
-                    <div class="price-eur">€150</div>
-                  </div>
-                </div>
+    </div>
+  </div>
+</section>
 
-                <div class="panel-card" style="grid-column: span 12; padding: 1rem 1.05rem;">
-                  <div style="display:flex; justify-content:space-between; gap: 0.75rem; align-items: baseline;">
-                    <div>
-                      <div class="price-size">6k — Long-term survival</div>
-                      <div class="price-sub">Room to explore for weeks/months</div>
-                    </div>
-                    <div class="price-eur">€450</div>
-                  </div>
-                </div>
+<section class="sec-alt" id="brief">
+  <div class="container wrap">
+    <div class="sec-head">
+      <h2>Send this to get a fast quote</h2>
+      <p>These details let me give you a clean price and a realistic timeline on the first reply.</p>
+      <div class="divider"></div>
+    </div>
 
-                <div class="panel-card" style="grid-column: span 12; padding: 1rem 1.05rem;">
-                  <div style="display:flex; justify-content:space-between; gap: 0.75rem; align-items: baseline;">
-                    <div>
-                      <div class="price-size">10k — “Forever” world</div>
-                      <div class="price-sub">Massive servers and big plans</div>
-                    </div>
-                    <div class="price-eur">€750</div>
-                  </div>
-                </div>
-              </div>
+    <div class="card-glass card-pad">
+      <div class="brief-grid">
 
-              <div class="pricing-notes">
-                <div class="note-line">
-                  <span class="note-bullet"></span>
-                  <div><strong>All biomes included.</strong> We plan layout + transitions together.</div>
-                </div>
-                <div class="note-line">
-                  <span class="note-bullet"></span>
-                  <div>Want a quote fast? Send size + player count + vibe. I’ll suggest what plays best.</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Right: full table -->
-            <div class="panel-card">
-              <div class="pricing-head">
-                <h5 class="pricing-title"><span class="pricing-dot"></span>All sizes</h5>
-                <span class="pricing-badge">Estimates</span>
-              </div>
-
-              <ul class="price-list">
-                <li class="price-row">
-                  <div class="price-left">
-                    <span class="price-size">1k</span>
-                    <span class="price-sub">Small / quick start</span>
-                  </div>
-                  <span class="price-eur">€80</span>
-                </li>
-
-                <li class="price-row">
-                  <div class="price-left">
-                    <span class="price-size">2k</span>
-                    <span class="price-sub">Compact SMP</span>
-                  </div>
-                  <span class="price-eur">€150</span>
-                </li>
-
-                <li class="price-row">
-                  <div class="price-left">
-                    <span class="price-size">4k</span>
-                    <span class="price-sub">Balanced exploration</span>
-                  </div>
-                  <span class="price-eur">€300</span>
-                </li>
-
-                <li class="price-row">
-                  <div class="price-left">
-                    <span class="price-size">6k</span>
-                    <span class="price-sub">Long-term survival</span>
-                  </div>
-                  <span class="price-eur">€450</span>
-                </li>
-
-                <li class="price-row">
-                  <div class="price-left">
-                    <span class="price-size">8k</span>
-                    <span class="price-sub">Large servers</span>
-                  </div>
-                  <span class="price-eur">€600</span>
-                </li>
-
-                <li class="price-row">
-                  <div class="price-left">
-                    <span class="price-size">10k</span>
-                    <span class="price-sub">Massive “forever” world</span>
-                  </div>
-                  <span class="price-eur">€750</span>
-                </li>
-
-                <li class="price-row">
-                  <div class="price-left">
-                    <span class="price-size">15k+</span>
-                    <span class="price-sub">Custom purposes</span>
-                  </div>
-                  <span class="price-eur">€1100+</span>
-                </li>
-              </ul>
-
-              <div class="pricing-notes">
-                <div class="note-line">
-                  <span class="note-bullet"></span>
-                  <div>Extra custom requirements (special layouts, dense POIs, strict deadlines) can affect final pricing.</div>
-                </div>
-              </div>
-            </div>
-
+        <div class="brief-box">
+          <div class="brief-top">
+            <div class="icon-bubble"><span class="mbr-iconfont mobi-mbri-target mobi-mbri"></span></div>
+            <h5>Project basics</h5>
           </div>
+          <p>Preferred map size, expected player count, and your server style (SMP, hardcore, casual, roleplay).</p>
+        </div>
 
-          <div class="pill-row">
-            <a class="pill" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Get a quote on Discord</a>
-            <a class="pill" href="mailto:info@zhyrrdesigns.com">Get a quote by email</a>
+        <div class="brief-box">
+          <div class="brief-top">
+            <div class="icon-bubble"><span class="mbr-iconfont mobi-mbri-smile-face mobi-mbri"></span></div>
+            <h5>Theme and vibe</h5>
           </div>
+          <p>Realistic, fantasy, mountains, coastlines, islands, or anything specific you want the world to feel like.</p>
+        </div>
 
-          <div class="note-muted">
-            Payment: <strong>50% downpayment</strong> to secure your slot, remaining <strong>50%</strong> on final preview before delivery.
+        <div class="brief-box">
+          <div class="brief-top">
+            <div class="icon-bubble"><span class="mbr-iconfont mobi-mbri-map-pin mobi-mbri"></span></div>
+            <h5>Biomes and landmarks</h5>
           </div>
+          <p>Must have biomes, biomes to avoid, and any landmarks or regions you want included.</p>
+        </div>
+
+        <div class="brief-box">
+          <div class="brief-top">
+            <div class="icon-bubble"><span class="mbr-iconfont mobi-mbri-calendar mobi-mbri"></span></div>
+            <h5>Timing and platform</h5>
+          </div>
+          <p>Deadline (if any), Java or Bedrock, and any technical needs such as borders or world height.</p>
+        </div>
+
+      </div>
+
+      <div class="brief-template">
+        <div class="muted">Template you can paste into Discord or email</div>
+        <div class="template-box">
+          Size: __ | Players: __ | Server style: __ | Vibe: __ | Must have biomes: __ | Avoid: __ | Deadline: __ | Java or Bedrock: __
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PIPELINE ===== -->
-<section class="commission" id="pipeline">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <div class="commission-card">
-          <div class="commission-title">Commission Pipeline</div>
-          <div class="commission-divider"></div>
-          <p class="commission-sub">
-            We plan the world together, I build with frequent updates, and you receive a finished survival-ready map.
-          </p>
+<section class="sec" id="pricing">
+  <div class="container wrap">
+    <div class="sec-head">
+      <h2>Pricing</h2>
+      <p>Estimates based on size. Final price depends on complexity and deadline.</p>
+      <div class="divider"></div>
+    </div>
 
-          <div class="grid-12" style="margin-top: 1.3rem;">
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">1</div>
-                <h5>Idea & Direction</h5>
-              </div>
-              <p>
-                We discuss map size vs. player count, biome spacing, progression, landmarks, and the overall vibe.
-                I’ll give honest suggestions (what plays best) while staying true to your vision.
-              </p>
-            </div>
+    <div class="card-glass card-pad">
+      <div class="pricing-grid">
 
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">2</div>
-                <h5>Planning & Downpayment</h5>
-              </div>
-              <p>
-                Once the plan is locked in, a <strong>50% downpayment</strong> secures your slot. After that, I start building.
-              </p>
-            </div>
-
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">3</div>
-                <h5>Build Phase & Feedback</h5>
-              </div>
-              <p>
-                I send frequent progress screenshots and updates. You can request adjustments while we build,
-                so there are no surprises at the end.
-              </p>
-            </div>
-
-            <div class="panel-card" style="grid-column: span 6;">
-              <div class="panel-top">
-                <div class="panel-badge">4</div>
-                <h5>Final Preview & Delivery</h5>
-              </div>
-              <p>
-                You receive final in-game screenshots as a preview. After the remaining <strong>50%</strong>,
-                I deliver the map and you can request <strong>small finishing tweaks</strong> after testing.
-              </p>
-            </div>
+        <div class="price-card">
+          <span class="tag">Starter</span>
+          <h5>Small worlds</h5>
+          <p class="p">Good for quick launches and smaller groups.</p>
+          <div class="price">€80 <small>from 1k</small></div>
+          <div class="muted" style="margin-top: 0.6rem; line-height: 1.6;">
+            Compact travel, fast progression, low setup time.
           </div>
+        </div>
 
-          <div class="note-muted">
-            Tip: if you’re unsure about size/layout, tell me your player count + how long you want the world to last — I’ll help you pick.
+        <div class="price-card">
+          <span class="tag">Most common</span>
+          <h5>Long term SMP</h5>
+          <p class="p">Balanced exploration for servers that want months of play.</p>
+          <div class="price">€450 <small>around 6k</small></div>
+          <div class="muted" style="margin-top: 0.6rem; line-height: 1.6;">
+            Strong biome spacing and survival friendly flow.
           </div>
+        </div>
 
-          <div class="pill-row">
-            <a class="pill" href="mailto:info@zhyrrdesigns.com">
-              <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span> info@zhyrrdesigns.com
-            </a>
-            <a class="pill" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
-              <span class="mbr-iconfont socicon-discord socicon"></span> Discord: <strong>Zhyrr</strong>
-            </a>
+        <div class="price-card">
+          <span class="tag">Massive</span>
+          <h5>Forever worlds</h5>
+          <p class="p">Big servers, big plans, maximum exploration.</p>
+          <div class="price">€750 <small>around 10k</small></div>
+          <div class="muted" style="margin-top: 0.6rem; line-height: 1.6;">
+            Room for seasons of content and multiple regions.
           </div>
+        </div>
+
+      </div>
+
+      <div class="price-table">
+        <div class="price-row">
+          <div>
+            <div class="l">1k</div>
+            <div class="s">Small quick start</div>
+          </div>
+          <div class="r">€80</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="l">2k</div>
+            <div class="s">Compact SMP</div>
+          </div>
+          <div class="r">€150</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="l">4k</div>
+            <div class="s">Balanced exploration</div>
+          </div>
+          <div class="r">€300</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="l">6k</div>
+            <div class="s">Long term survival</div>
+          </div>
+          <div class="r">€450</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="l">8k</div>
+            <div class="s">Large servers</div>
+          </div>
+          <div class="r">€600</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="l">10k</div>
+            <div class="s">Massive world</div>
+          </div>
+          <div class="r">€750</div>
+        </div>
+        <div class="price-row">
+          <div>
+            <div class="l">15k plus</div>
+            <div class="s">Custom purposes</div>
+          </div>
+          <div class="r">€1100 plus</div>
+        </div>
+      </div>
+
+      <div class="pricing-notes">
+        <div class="bullet">
+          <span class="dot"></span>
+          <div>All kinds of biomes included. We plan layout and transitions together.</div>
+        </div>
+        <div class="bullet">
+          <span class="dot"></span>
+          <div>Payment: 50 percent deposit to secure your slot, remaining 50 percent on final preview before delivery.</div>
+        </div>
+        <div class="bullet">
+          <span class="dot"></span>
+          <div>Extra requirements such as strict deadlines, dense points of interest, or special layouts can affect final pricing.</div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 justify-content-center" style="margin-top: 1.2rem;">
+          <a class="chip" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Request a quote on Discord</a>
+          <a class="chip" href="mailto:info@zhyrrdesigns.com">Request a quote by email</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PROOF (REVIEWS + COLLABS) ===== -->
-<section data-bs-version="5.1" id="proof">
-  <div class="container proof-wrap">
-
-    <div class="proof-head">
-      <h2>Proof of Work</h2>
-      <p>Client reviews + videos made on commissioned worlds.</p>
+<section class="sec-alt" id="process">
+  <div class="container wrap">
+    <div class="sec-head">
+      <h2>Process</h2>
+      <p>Simple structure, clear checkpoints, and frequent communication.</p>
+      <div class="divider"></div>
     </div>
 
-    <!-- Reviews Carousel -->
-    <div id="reviewsCarousel" class="carousel slide review-carousel review-controls" data-bs-ride="carousel" data-bs-interval="6500" data-bs-touch="true">
-      <div class="carousel-inner">
-
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="review-slide">
-            <div class="review-card">
-              <div class="review-thumb">
-                <img src="assets/images/Reviews/RLW.png" alt="Commission map preview">
-              </div>
-              <div>
-                <p class="review-quote">
-                  “beautiful layout I love the mix of snow in the rivers in and the terrain is colourful and the small structures bring a smile
-                  If you want someone that can make you a amazing world I recommend @Zhyrr”
-                </p>
-                <div class="review-meta">
-                  <span><strong>RLW</strong></span>
-                  <span>Server</span>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div class="card-glass card-pad">
+      <div class="timeline">
+        <div class="step">
+          <div class="n">1</div>
+          <h5>Direction</h5>
+          <p>We confirm size, biome layout, progression, and the world vibe. I suggest what plays best for your player count.</p>
         </div>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="review-slide">
-            <div class="review-card">
-              <div class="review-thumb">
-                <img src="assets/images/Reviews/Chernaya.png" alt="Commission map preview">
-              </div>
-              <div>
-                <p class="review-quote">
-                  “Zhyrr delivered an exceptional 9kx6k fantasy map, combining professionalism, creativity, and meticulous attention to detail while continuously improving and refining the project throughout the commission. He fully immersed himself in our vision, handled extensive feedback with ease, and consistently went above and beyond expectations. I wholeheartedly recommend him to anyone seeking a large, detailed, and high-quality custom map. Worth every moment of the wait. ⭐⭐⭐⭐⭐”
-                </p>
-                <div class="review-meta">
-                  <span><strong>Chernaya</strong></span>
-                  <span>Server</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="step">
+          <div class="n">2</div>
+          <h5>Slot secured</h5>
+          <p>Deposit secures your spot. After that, I start the build and set up update checkpoints.</p>
         </div>
 
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <div class="review-slide">
-            <div class="review-card">
-              <div class="review-thumb">
-                <img src="assets/images/Reviews/Antoine.png" alt="Commission map preview">
-              </div>
-              <div>
-                <p class="review-quote">
-                  “I had a very good exchange with Zhyrr. Very pleasant and enthusiastic.
-                  The deadline is more than fast. Honestly, I compared with many other freelancers before working with Zhyrr, and I think there is no better value for money for time (whatever you want).
-                  The player's immersion is more than successful. 🤩 All the seabeds are detailed. THANKS again. 😄”
-                </p>
-                <div class="review-meta">
-                  <span><strong>Antoine</strong></span>
-                  <span>Minecraft Marketplace</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="step">
+          <div class="n">3</div>
+          <h5>Build and feedback</h5>
+          <p>You receive progress screenshots. You can request adjustments while the world is being shaped.</p>
         </div>
 
+        <div class="step">
+          <div class="n">4</div>
+          <h5>Final preview</h5>
+          <p>You receive final screenshots, you approve, then delivery. Small finishing tweaks are included after testing.</p>
+        </div>
       </div>
 
-      <!-- Prev/Next -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Previous review">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Next review">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
+      <div class="muted" style="margin-top: 1.2rem; text-align:center; line-height: 1.7;">
+        If you are not sure about size, tell me your player count and how long you want the world to last.
+        I will recommend the best option.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="proof">
+  <div class="container wrap">
+    <div class="sec-head">
+      <h2>Proof</h2>
+      <p>Client reviews and videos recorded on commissioned worlds.</p>
+      <div class="divider"></div>
     </div>
 
-    <!-- Dots -->
+    <div class="review-shell">
+      <div id="reviewsCarousel" class="carousel slide review-controls" data-bs-ride="carousel" data-bs-interval="6500" data-bs-touch="true">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="thumb">
+                  <img src="assets/images/Reviews/RLW.png" alt="Commission map preview">
+                </div>
+                <div>
+                  <p class="quote">
+                    “beautiful layout I love the mix of snow in the rivers in and the terrain is colourful and the small structures bring a smile
+                    If you want someone that can make you a amazing world I recommend @Zhyrr”
+                  </p>
+                  <div class="meta">
+                    <span><strong>RLW</strong></span>
+                    <span>Server</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="thumb">
+                  <img src="assets/images/Reviews/Chernaya.png" alt="Commission map preview">
+                </div>
+                <div>
+                  <p class="quote">
+                    “Zhyrr delivered an exceptional 9kx6k fantasy map, combining professionalism, creativity, and meticulous attention to detail while continuously improving and refining the project throughout the commission. He fully immersed himself in our vision, handled extensive feedback with ease, and consistently went above and beyond expectations. I wholeheartedly recommend him to anyone seeking a large, detailed, and high quality custom map. Worth every moment of the wait. ⭐⭐⭐⭐⭐”
+                  </p>
+                  <div class="meta">
+                    <span><strong>Chernaya</strong></span>
+                    <span>Server</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="thumb">
+                  <img src="assets/images/Reviews/Antoine.png" alt="Commission map preview">
+                </div>
+                <div>
+                  <p class="quote">
+                    “I had a very good exchange with Zhyrr. Very pleasant and enthusiastic.
+                    The deadline is more than fast. Honestly, I compared with many other freelancers before working with Zhyrr, and I think there is no better value for money for time.
+                    The player's immersion is more than successful. All the seabeds are detailed. THANKS again.”
+                  </p>
+                  <div class="meta">
+                    <span><strong>Antoine</strong></span>
+                    <span>Minecraft Marketplace</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Previous review">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Next review">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+
     <div class="review-dots">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
@@ -897,15 +855,15 @@
       </div>
     </div>
 
-    <!-- Collaborations -->
-    <div style="height: 2.25rem;"></div>
-    <div class="proof-head" style="margin-bottom: 1.2rem;">
+    <div style="height: 2.3rem;"></div>
+
+    <div class="sec-head" style="margin-bottom: 1.2rem;">
       <h2>Collaborations</h2>
-      <p>Videos made on commissioned worlds. (More collaborations coming!)</p>
+      <p>Videos made on commissioned worlds. More coming.</p>
+      <div class="divider"></div>
     </div>
 
     <div class="yt-grid">
-      <!-- Video 1 -->
       <div class="yt-card">
         <iframe class="yt-embed"
           src="https://www.youtube.com/embed/SZn-qQGLhdM?start=3523"
@@ -918,7 +876,6 @@
         </div>
       </div>
 
-      <!-- Video 2 -->
       <div class="yt-card">
         <iframe class="yt-embed"
           src="https://www.youtube.com/embed/2FE7pOBbRn8"
@@ -932,14 +889,19 @@
       </div>
     </div>
 
+    <div class="d-flex flex-wrap gap-2 justify-content-center" style="margin-top: 1.4rem;">
+      <a class="chip" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Start your request on Discord</a>
+      <a class="chip" href="mailto:info@zhyrrdesigns.com">Start your request by email</a>
+    </div>
+
   </div>
 </section>
 
-<!-- ===== MINI FAQ ===== -->
 <section data-bs-version="5.1" class="content16 cid-tjqfD1HjQw" id="mini-faq">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12 col-md-10">
+
         <div class="mbr-section-head align-center mb-4">
           <h3 class="mbr-section-title mb-0 mbr-fonts-style display-2"><strong>Commission FAQ</strong></h3>
         </div>
@@ -956,8 +918,8 @@
             <div id="cCollapse1" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="cHeadingOne" data-bs-parent="#bootstrap-accordion_commission">
               <div class="panel-body">
                 <p class="mbr-fonts-style panel-text display-4">
-                  Handcrafted terrain, biome composition and transitions, coastlines/oceans (if requested), and survival-focused world flow.
-                  Prices are estimates and may change based on complexity and deadlines.
+                  Handcrafted terrain, biome composition and transitions, and a survival focused layout.
+                  Pricing is an estimate and may change based on complexity and deadlines.
                 </p>
               </div>
             </div>
@@ -973,8 +935,7 @@
             <div id="cCollapse2" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="cHeadingTwo" data-bs-parent="#bootstrap-accordion_commission">
               <div class="panel-body">
                 <p class="mbr-fonts-style panel-text display-4">
-                  It depends on map size and complexity. Once you message me with your size and goals,
-                  I’ll give you a clear estimate before we start.
+                  It depends on map size and complexity. Message me your size and goals and I will give a clear estimate before we begin.
                 </p>
               </div>
             </div>
@@ -990,7 +951,7 @@
             <div id="cCollapse3" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="cHeadingThree" data-bs-parent="#bootstrap-accordion_commission">
               <div class="panel-body">
                 <p class="mbr-fonts-style panel-text display-4">
-                  Yes, small finishing tweaks are included after you test the map. Bigger changes can be discussed separately.
+                  Yes. Small finishing tweaks are included after you test the map. Bigger changes can be discussed separately.
                 </p>
               </div>
             </div>
@@ -1006,8 +967,7 @@
             <div id="cCollapse4" class="panel-collapse noScroll collapse" role="tabpanel" aria-labelledby="cHeadingFour" data-bs-parent="#bootstrap-accordion_commission">
               <div class="panel-body">
                 <p class="mbr-fonts-style panel-text display-4">
-                  Message me on Discord (Zhyrr) or email info@zhyrrdesigns.com with:
-                  preferred map size, expected player count, and the vibe/biomes you want.
+                  Message me on Discord or email with your size, player count, and the vibe you want. Use the template on this page for the fastest reply.
                 </p>
               </div>
             </div>
@@ -1015,9 +975,9 @@
 
         </div>
 
-        <div class="pill-row" style="margin-top: 1.2rem;">
-          <a class="pill" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Message me on Discord</a>
-          <a class="pill" href="mailto:info@zhyrrdesigns.com">Email me</a>
+        <div class="d-flex flex-wrap gap-2 justify-content-center" style="margin-top: 1.2rem;">
+          <a class="chip" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Message me on Discord</a>
+          <a class="chip" href="mailto:info@zhyrrdesigns.com">Email me</a>
         </div>
 
       </div>
@@ -1025,7 +985,6 @@
   </div>
 </section>
 
-<!-- ===== FINAL CTA ===== -->
 <section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-commissions">
   <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(1, 17, 26);"></div>
   <div class="align-center container">
@@ -1035,20 +994,21 @@
           <strong>Ready to start?</strong>
         </h3>
         <p class="mbr-text mbr-fonts-style display-7" style="color: rgba(255,255,255,0.78);">
-          Send your size + idea, and I’ll reply with questions, suggestions, and a clear quote.
+          Send your size and idea and I will reply with questions, suggestions, and a clear quote.
           <br>
-          <span style="opacity: 0.92;"><strong>“Size: __ | Players: __ | Vibe: __ | Must-have biomes: __ | Deadline: __ | Java/Bedrock: __”</strong></span>
+          <span style="opacity: 0.92; font-weight: 800;">
+            Size: __ | Players: __ | Server style: __ | Vibe: __ | Must have biomes: __ | Avoid: __ | Deadline: __ | Java or Bedrock: __
+          </span>
         </p>
         <div class="mbr-section-btn">
           <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Message me on Discord</a>
-          <a class="btn btn-info-outline display-4" href="mailto:info@zhyrrdesigns.com">Email Me</a>
+          <a class="btn btn-info-outline display-4" href="mailto:info@zhyrrdesigns.com">Email me</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
 <section data-bs-version="5.1" class="footer1 cid-tkbGMWG3Nn" once="footer" id="footer01-commissions">
   <div class="container">
     <div class="row justify-content-center">
@@ -1093,7 +1053,6 @@
   </div>
 </section>
 
-<!-- Scripts (matches your site) -->
 <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="assets/parallax/jarallax.js"></script>
 <script src="assets/smoothscroll/smooth-scroll.js"></script>
@@ -1103,6 +1062,5 @@
 <script src="assets/theme/js/script.js"></script>
 
 <input name="animation" type="hidden">
-
 </body>
 </html>
