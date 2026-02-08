@@ -82,6 +82,17 @@
       color: #fff;
       text-decoration:none;
     }
+    /* NEW: static chips in hero (no hyperlinks) */
+    .chip-static {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.92;
+    }
+    .chip-static:hover {
+      transform: none;
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.12);
+    }
 
     /* Premium card */
     .card-glass {
@@ -410,6 +421,7 @@
 
 <body>
 
+<!-- HEADER (kept from your code) -->
 <section data-bs-version="5.1" class="menu menu2 cid-tkbL8n4vab" once="menu" id="menu2-16">
   <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
     <div class="container-fluid">
@@ -462,6 +474,7 @@
   </nav>
 </section>
 
+<!-- HERO (kept structure; chips changed to non-links; hero copy tightened slightly) -->
 <section data-bs-version="5.1" class="header14 cid-tjqpRpO1sc mbr-fullscreen mbr-parallax-background" id="header14-commissions">
   <div class="mbr-overlay" style="opacity: 0.82; background-color: rgb(1, 17, 26);"></div>
 
@@ -479,10 +492,11 @@
 
           <p class="mbr-text mbr-fonts-style display-7 hero-sub">
             Want a world made specifically for your server, SMP, or friend group?
-            I create handcrafted Minecraft survival worlds designed for long term play, meaningful exploration,
-            and natural progression, with frequent updates and clear delivery.
+            I create handcrafted Minecraft survival worlds designed for long-term play,
+            meaningful exploration, and natural progression.
             <br><br>
-            Message me with your idea and preferred map size to get a clear quote.
+            You’ll get clear pricing, frequent progress updates, and a world that plays well from spawn to end game —
+            not just something that looks good on screenshots.
           </p>
 
           <div class="mbr-section-btn mt-3">
@@ -490,12 +504,13 @@
             <a class="btn btn-info-outline display-4" href="mailto:info@zhyrrdesigns.com">Email Me</a>
           </div>
 
-          <div class="hero-chip-row">
-            <a class="chip" href="#brief">What to send</a>
-            <a class="chip" href="#pricing">Pricing</a>
-            <a class="chip" href="#process">Process</a>
-            <a class="chip" href="#proof">Proof</a>
-            <a class="chip" href="#mini-faq">FAQ</a>
+          <!-- Changed: no hyperlinks -->
+          <div class="hero-chip-row" aria-label="Commission highlights">
+            <span class="chip chip-static">Handcrafted terrain</span>
+            <span class="chip chip-static">Survival-first layouts</span>
+            <span class="chip chip-static">Clear pricing</span>
+            <span class="chip chip-static">Frequent updates</span>
+            <span class="chip chip-static">Long-term SMP focused</span>
           </div>
 
           <div class="mbr-text mbr-fonts-style display-7 muted" style="margin-top: 0.9rem; line-height: 1.65;">
@@ -507,6 +522,7 @@
   </div>
 </section>
 
+<!-- REST OF PAGE (kept as you provided) -->
 <section class="sec" id="trust">
   <div class="container wrap">
     <div class="sec-head">
@@ -767,7 +783,7 @@
 <section class="sec" id="proof">
   <div class="container wrap">
     <div class="sec-head">
-      <h2>Proof</h2>
+      <h2>Reviews</h2>
       <p>Client reviews and videos recorded on commissioned worlds.</p>
       <div class="divider"></div>
     </div>
@@ -1009,6 +1025,7 @@
   </div>
 </section>
 
+<!-- FOOTER (kept from your code) -->
 <section data-bs-version="5.1" class="footer1 cid-tkbGMWG3Nn" once="footer" id="footer01-commissions">
   <div class="container">
     <div class="row justify-content-center">
