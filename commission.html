@@ -382,7 +382,167 @@
       .review-card { grid-template-columns: 1fr; }
       .thumb img { aspect-ratio: 16 / 9; }
     }
+    /* --------- Proof section layout / rhythm --------- */
+.sec-proof{
+  padding: 5rem 0;
+}
 
+.sec-proof .sec-head{
+  max-width: 900px;
+  margin: 0 auto 2rem;
+}
+
+.sec-proof .sec-head p{
+  max-width: 60ch;
+  margin-bottom: 0.9rem;
+}
+
+.sec-proof .sec-head--tight{
+  margin-bottom: 1.25rem;
+}
+
+/* Subtle separator between reviews and collabs */
+.sec-proof .sec-sep{
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(255,255,255,.18), transparent);
+  margin: 3.25rem auto;
+  max-width: 900px;
+}
+
+/* --------- Reviews carousel --------- */
+.sec-proof .review-shell{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sec-proof #reviewsCarousel{
+  position: relative;
+}
+
+/* Card layout: image + text (not stacked) */
+.sec-proof .review-card{
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.25rem;
+  padding: 1.6rem;
+  border-radius: 18px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  box-shadow: 0 10px 30px rgba(0,0,0,.18);
+  align-items: center;
+}
+
+.sec-proof .thumb img{
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Quote + meta */
+.sec-proof .quote{
+  margin: 0 0 1rem;
+  line-height: 1.6;
+}
+
+.sec-proof .meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  align-items: center;
+  opacity: .92;
+}
+
+.sec-proof .meta .name{
+  font-weight: 700;
+}
+
+.sec-proof .meta .tag{
+  padding: .2rem .55rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.03);
+  font-size: .92rem;
+}
+
+/* Put the dots inside the carousel and pull them up slightly */
+.sec-proof #reviewsCarousel .carousel-indicators{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -34px;
+  margin: 0;
+}
+
+/* Make the controls feel nicer on top of the card */
+.sec-proof #reviewsCarousel .carousel-control-prev,
+.sec-proof #reviewsCarousel .carousel-control-next{
+  width: 12%;
+}
+
+.sec-proof #reviewsCarousel .carousel-control-prev-icon,
+.sec-proof #reviewsCarousel .carousel-control-next-icon{
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+  opacity: .95;
+}
+
+/* --------- YouTube grid --------- */
+.sec-proof .yt-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.sec-proof .yt-card{
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(255,255,255,.04);
+  box-shadow: 0 10px 30px rgba(0,0,0,.16);
+}
+
+.sec-proof .yt-embed{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  border: 0;
+}
+
+.sec-proof .yt-body{
+  padding: 1rem 1.1rem 1.2rem;
+}
+
+.sec-proof .yt-title{
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.sec-proof .yt-sub{
+  margin: .25rem 0 0;
+  opacity: .85;
+  line-height: 1.45;
+}
+
+/* --------- Responsive --------- */
+@media (max-width: 900px){
+  .sec-proof .yt-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px){
+  .sec-proof .review-card{
+    grid-template-columns: 1fr;
+  }
+  .sec-proof .thumb img{
+    height: 220px;
+  }
+  .sec-proof #reviewsCarousel .carousel-indicators{
+    bottom: -30px;
+  }
+} 
     /* Videos */
     .yt-grid {
       display:grid;
@@ -554,16 +714,25 @@
   </div>
 </section>
 
-<section class="sec" id="proof">
+<!-- REVIEWS + COLLABS SECTION (drop-in) -->
+<section class="sec sec-proof" id="proof">
   <div class="container wrap">
+
+    <!-- Reviews header -->
     <div class="sec-head">
       <h2>Reviews</h2>
       <p>Client reviews and videos recorded on commissioned worlds.</p>
       <div class="divider"></div>
     </div>
 
+    <!-- Reviews carousel -->
     <div class="review-shell">
-      <div id="reviewsCarousel" class="carousel slide review-controls" data-bs-ride="carousel" data-bs-interval="6500" data-bs-touch="true">
+      <div id="reviewsCarousel"
+           class="carousel slide review-controls"
+           data-bs-ride="carousel"
+           data-bs-interval="6500"
+           data-bs-touch="true">
+
         <div class="carousel-inner">
 
           <div class="carousel-item active">
@@ -572,14 +741,16 @@
                 <div class="thumb">
                   <img src="assets/images/Reviews/RLW.png" alt="Commission map preview">
                 </div>
-                <div>
+
+                <div class="review-body">
                   <p class="quote">
                     “beautiful layout I love the mix of snow in the rivers in and the terrain is colourful and the small structures bring a smile
                     If you want someone that can make you a amazing world I recommend @Zhyrr”
                   </p>
+
                   <div class="meta">
-                    <span><strong>RLW</strong></span>
-                    <span>Server</span>
+                    <span class="name">RLW</span>
+                    <span class="tag">Server</span>
                   </div>
                 </div>
               </div>
@@ -592,13 +763,15 @@
                 <div class="thumb">
                   <img src="assets/images/Reviews/Chernaya.png" alt="Commission map preview">
                 </div>
-                <div>
+
+                <div class="review-body">
                   <p class="quote">
                     “Zhyrr delivered an exceptional 9kx6k fantasy map, combining professionalism, creativity, and meticulous attention to detail while continuously improving and refining the project throughout the commission. He fully immersed himself in our vision, handled extensive feedback with ease, and consistently went above and beyond expectations. I wholeheartedly recommend him to anyone seeking a large, detailed, and high quality custom map. Worth every moment of the wait. ⭐⭐⭐⭐⭐”
                   </p>
+
                   <div class="meta">
-                    <span><strong>Chernaya</strong></span>
-                    <span>Server</span>
+                    <span class="name">Chernaya</span>
+                    <span class="tag">Server</span>
                   </div>
                 </div>
               </div>
@@ -611,15 +784,17 @@
                 <div class="thumb">
                   <img src="assets/images/Reviews/Antoine.png" alt="Commission map preview">
                 </div>
-                <div>
+
+                <div class="review-body">
                   <p class="quote">
                     “I had a very good exchange with Zhyrr. Very pleasant and enthusiastic.
                     The deadline is more than fast. Honestly, I compared with many other freelancers before working with Zhyrr, and I think there is no better value for money for time.
                     The player's immersion is more than successful. All the seabeds are detailed. THANKS again.”
                   </p>
+
                   <div class="meta">
-                    <span><strong>Antoine</strong></span>
-                    <span>Minecraft Marketplace</span>
+                    <span class="name">Antoine</span>
+                    <span class="tag">Minecraft Marketplace</span>
                   </div>
                 </div>
               </div>
@@ -628,32 +803,37 @@
 
         </div>
 
+        <!-- controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Previous review">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Next review">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
+
+        <!-- dots INSIDE carousel (cleaner, less stacked) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Review 2"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Review 3"></button>
+        </div>
+
       </div>
     </div>
 
-    <div class="review-dots">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
-        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Review 2"></button>
-        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Review 3"></button>
-      </div>
-    </div>
+    <!-- separator between the two blocks -->
+    <div class="sec-sep" aria-hidden="true"></div>
 
-    <div style="height: 2.3rem;"></div>
-
-    <div class="sec-head" style="margin-bottom: 1.2rem;">
+    <!-- Collaborations header -->
+    <div class="sec-head sec-head--tight">
       <h2>Collaborations</h2>
       <p>Videos made on commissioned worlds. More coming.</p>
       <div class="divider"></div>
     </div>
 
+    <!-- YouTube grid -->
     <div class="yt-grid">
+
       <div class="yt-card">
         <iframe class="yt-embed"
           src="https://www.youtube.com/embed/SZn-qQGLhdM?start=3523"
@@ -677,13 +857,8 @@
           <p class="yt-sub">I worked on the Dutch submission.</p>
         </div>
       </div>
-    </div>
 
-    <div class="d-flex flex-wrap gap-2 justify-content-center" style="margin-top: 1.4rem;">
-      <a class="chip" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Start your request on Discord</a>
-      <a class="chip" href="mailto:info@zhyrrdesigns.com">Start your request by email</a>
     </div>
-
   </div>
 </section>
 
@@ -691,7 +866,7 @@
   data-bs-version="5.1"
   class="info1 cid-tjqN7jdkCu"
   id="info1-commissions"
-  style="background-image: url('assets/images/slideshowimages/6.jpeg'); background-size: cover; background-position: center;"
+  style="background-image: url('assets/images/slideshowimages/2.jpeg'); background-size: cover; background-position: center;"
 >
   <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(1, 17, 26);"></div>
   <div class="align-center container">
