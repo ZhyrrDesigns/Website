@@ -398,6 +398,11 @@
       .sec-proof .thumb img{ height: 220px; }
       .sec-proof #reviewsCarousel .carousel-indicators{ bottom: -30px; }
     }
+
+    .pricing-grid {
+  display: flex;          /* or grid if you're using grid */
+  gap: 20px;              /* space between items */
+}
   </style>
 </head>
 
@@ -473,17 +478,21 @@
           </h1>
 
           <p class="mbr-text mbr-fonts-style display-7 hero-sub">
-            Want a world made specifically for your server, SMP, or friend group?
-            I create handcrafted Minecraft survival worlds designed for long-term play,
-            meaningful exploration, and natural progression.
-            <br><br>
-            You’ll get clear pricing, frequent progress updates, and a world that plays well from spawn to end game.
-            Not just something that looks good on screenshots.
-          </p>
+  Want a world made specifically for <strong>your server, SMP, or friend group</strong>?
+  I create <strong>handcrafted Minecraft survival worlds</strong> designed for 
+  <strong>long-term play</strong>, meaningful exploration, and natural progression.
+  <br><br>
+  You’ll get <strong>clear pricing</strong>, <strong>frequent progress updates</strong>, 
+  and a world that <strong>plays well from spawn to end game</strong>.
+  <strong>Not just something that looks good on screenshots.</strong>
+</p>
 
           <div class="mbr-section-btn mt-3">
             <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Join Discord</a>
-            <a class="btn btn-info-outline display-4" href="mailto:info@zhyrrdesigns.com">Email Me</a>
+            <a class="btn btn-secondary display-4" 
+                   href="commission.html">
+                   Commission Me
+                </a>
           </div>
         </div>
       </div>
@@ -512,19 +521,6 @@
         <div class="stat">
           <div class="k">Delivery ready</div>
           <div class="t">Clean handoff, final preview, and small finishing tweaks after you test.</div>
-        </div>
-      </div>
-
-      <div style="margin-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.10); padding-top: 1.1rem;">
-        <div class="d-flex flex-wrap gap-2 justify-content-center">
-          <a class="chip" href="mailto:info@zhyrrdesigns.com">
-            <span class="mbr-iconfont mobi-mbri-letter mobi-mbri"></span>
-            info@zhyrrdesigns.com
-          </a>
-          <a class="chip" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
-            <span class="mbr-iconfont socicon-discord socicon"></span>
-            Discord: <strong>Zhyrr</strong>
-          </a>
         </div>
       </div>
 
@@ -676,8 +672,10 @@
 <section class="sec sec-proof" id="proof">
   <div class="container wrap">
     <div class="sec-head">
-      <h2>Proof</h2>
-      <p>Client reviews and videos recorded on commissioned worlds.</p>
+      <h2>Reviews</h2>
+      <p class="text-center">
+  Client reviews and videos recorded on commissioned worlds.
+</p>
       <div class="divider"></div>
     </div>
 
@@ -773,7 +771,9 @@
     <!-- Collaborations -->
     <div class="sec-head" style="margin-bottom: 1.2rem;">
       <h2>Collaborations</h2>
-      <p>Videos made on commissioned worlds. More coming.</p>
+      <p class="text-center">
+  Videos made on commissioned worlds. More coming.
+</p>
       <div class="divider"></div>
     </div>
 
@@ -799,11 +799,6 @@
           <p class="yt-sub">Another series recorded on a commissioned world.</p>
         </div>
       </div>
-    </div>
-
-    <div class="d-flex flex-wrap gap-2 justify-content-center" style="margin-top: 1.4rem;">
-      <a class="chip" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Start your request on Discord</a>
-      <a class="chip" href="mailto:info@zhyrrdesigns.com">Start your request by email</a>
     </div>
 
   </div>
@@ -893,25 +888,32 @@
   </div>
 </section>
 
-<!-- CTA -->
-<section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-commissions-ready">
+<!-- ===== DISCORD CTA (re-uses your existing style) ===== -->
+<section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-portfolio">
   <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(1, 17, 26);"></div>
   <div class="align-center container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-8">
-        <h3 class="mbr-section-title mb-4 mbr-fonts-style display-1">
-          <strong>Ready to start?</strong>
-        </h3>
-        <p class="mbr-text mbr-fonts-style display-7" style="color: rgba(255,255,255,0.78);">
-          Send your size and idea and I will reply with questions, suggestions, and a clear quote.
-          <br>
-        </p>
-        <div class="mbr-section-btn">
-          <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Message me on Discord</a>
-          <a class="btn btn-info-outline display-4" href="mailto:info@zhyrrdesigns.com">Email me</a>
-        </div>
+      <div class="row justify-content-center">
+          <div class="col-12 col-lg-8">
+              <h3 class="mbr-section-title mb-4 mbr-fonts-style display-1">
+                  <strong>Ready to start?</strong>
+              </h3>
+              <p class="mbr-text mbr-fonts-style display-7" style="color: rgba(255,255,255,0.78);">
+                Get in contact and we will bring your ideas to life!
+              </p>
+              <div class="mbr-section-btn">
+                <a class="btn btn-primary display-4 me-3" 
+                   href="https://discord.com/invite/Tzx7FKKe5R" 
+                   target="_blank">
+                   Discord Server
+                </a>
+
+                <a class="btn btn-secondary display-4" 
+                   href="commission.html">
+                   Commission Me
+                </a>
+              </div>
+          </div>
       </div>
-    </div>
   </div>
 </section>
 
