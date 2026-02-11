@@ -150,58 +150,6 @@
       .stat { grid-column: span 12; }
     }
 
-    /* Brief form */
-    .brief-grid {
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1rem;
-      margin-top: 1.3rem;
-    }
-    .brief-box {
-      grid-column: span 6;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 1.15rem 1.2rem;
-    }
-    .brief-top {
-      display:flex;
-      align-items:center;
-      gap: 0.75rem;
-      margin-bottom: 0.4rem;
-    }
-    .icon-bubble {
-      width: 38px; height: 38px;
-      display:grid; place-items:center;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      color: #fff;
-      flex: 0 0 auto;
-    }
-    .brief-box h5 { margin:0; color:#fff; font-size: 1.08rem; }
-    .brief-box p { margin:0.35rem 0 0; color: rgba(255,255,255,0.85); line-height: 1.75; }
-    .brief-template {
-      margin-top: 1.1rem;
-      border-top: 1px solid rgba(255,255,255,0.10);
-      padding-top: 1.1rem;
-      color: rgba(255,255,255,0.78);
-      line-height: 1.7;
-    }
-    .template-box {
-      margin-top: 0.7rem;
-      border-radius: 16px;
-      background: rgba(0,0,0,0.28);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 0.95rem 1rem;
-      color: rgba(255,255,255,0.92);
-      font-weight: 700;
-      overflow-wrap: anywhere;
-    }
-    @media (max-width: 992px){
-      .brief-box { grid-column: span 12; }
-    }
-
     /* Pricing layout */
     .pricing-grid {
       display:grid;
@@ -271,9 +219,7 @@
       color: rgba(255,255,255,0.72);
       line-height: 1.7;
     }
-    .bullet {
-      display:flex; gap: 0.6rem; margin-top: 0.6rem;
-    }
+    .bullet { display:flex; gap: 0.6rem; margin-top: 0.6rem; }
     .dot {
       width: 8px; height: 8px; border-radius: 999px;
       background: rgba(255,255,255,0.35);
@@ -282,290 +228,6 @@
 
     @media (max-width: 992px){
       .price-card { grid-column: span 12; }
-    }
-
-    /* Process timeline */
-    .timeline {
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1rem;
-      margin-top: 1.2rem;
-    }
-    .step {
-      grid-column: span 3;
-      border-radius: 18px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.10);
-      padding: 1.1rem 1.1rem 1.05rem;
-      height: 100%;
-    }
-    .step .n {
-      width: 38px; height: 38px;
-      display:grid; place-items:center;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.18);
-      color:#fff;
-      font-weight: 900;
-      margin-bottom: 0.55rem;
-    }
-    .step h5 { margin:0; color:#fff; font-size: 1.06rem; }
-    .step p { margin: 0.35rem 0 0; color: rgba(255,255,255,0.84); line-height: 1.72; }
-    @media (max-width: 992px){
-      .step { grid-column: span 12; }
-    }
-
-    /* Proof */
-    .review-shell {
-      border-radius: 22px;
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(10,16,22,0.70);
-      box-shadow: 0 18px 60px rgba(0,0,0,0.45);
-    }
-    .review-slide { padding: 1.35rem; }
-    .review-card {
-      display:grid;
-      grid-template-columns: 160px 1fr;
-      gap: 1.1rem;
-      align-items: start;
-    }
-    .thumb {
-      border-radius: 16px;
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(1,17,26,0.65);
-    }
-    .thumb img {
-      width:100%;
-      height:100%;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
-      display:block;
-    }
-    .quote { color: rgba(255,255,255,0.88); line-height: 1.85; margin:0; font-size: 1.02rem; }
-    .meta {
-      margin-top: 0.9rem;
-      padding-top: 0.9rem;
-      border-top: 1px solid rgba(255,255,255,0.10);
-      display:flex;
-      justify-content: space-between;
-      gap: 0.75rem;
-      flex-wrap: wrap;
-      color: rgba(255,255,255,0.70);
-      font-size: 0.95rem;
-    }
-    .meta strong { color: rgba(255,255,255,0.95); }
-
-    .review-controls .carousel-control-prev,
-    .review-controls .carousel-control-next { width: 4.2rem; }
-    .review-controls .carousel-control-prev-icon,
-    .review-controls .carousel-control-next-icon {
-      filter: drop-shadow(0 10px 18px rgba(0,0,0,0.55));
-    }
-
-    .review-dots { margin-top: 0.9rem; }
-    .review-dots .carousel-indicators {
-      position: static;
-      margin: 0;
-      gap: 8px;
-    }
-    .review-dots .carousel-indicators [data-bs-target]{
-      width: 10px; height: 10px;
-      border-radius: 999px;
-      border: 0;
-      opacity: 0.35;
-    }
-    .review-dots .carousel-indicators .active { opacity: 0.85; }
-
-    @media (max-width: 768px){
-      .review-card { grid-template-columns: 1fr; }
-      .thumb img { aspect-ratio: 16 / 9; }
-    }
-    /* --------- Proof section layout / rhythm --------- */
-.sec-proof{
-  padding: 5rem 0;
-}
-
-.sec-proof .sec-head{
-  max-width: 900px;
-  margin: 0 auto 2rem;
-}
-
-.sec-proof .sec-head p{
-  max-width: 60ch;
-  margin-bottom: 0.9rem;
-}
-
-.sec-proof .sec-head--tight{
-  margin-bottom: 1.25rem;
-}
-
-/* Subtle separator between reviews and collabs */
-.sec-proof .sec-sep{
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(255,255,255,.18), transparent);
-  margin: 3.25rem auto;
-  max-width: 900px;
-}
-
-/* --------- Reviews carousel --------- */
-.sec-proof .review-shell{
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.sec-proof #reviewsCarousel{
-  position: relative;
-}
-
-/* Card layout: image + text (not stacked) */
-.sec-proof .review-card{
-  display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 1.25rem;
-  padding: 1.6rem;
-  border-radius: 18px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
-  box-shadow: 0 10px 30px rgba(0,0,0,.18);
-  align-items: center;
-}
-
-.sec-proof .thumb img{
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 14px;
-  display: block;
-}
-
-/* Quote + meta */
-.sec-proof .quote{
-  margin: 0 0 1rem;
-  line-height: 1.6;
-}
-
-.sec-proof .meta{
-  display: flex;
-  flex-wrap: wrap;
-  gap: .6rem;
-  align-items: center;
-  opacity: .92;
-}
-
-.sec-proof .meta .name{
-  font-weight: 700;
-}
-
-.sec-proof .meta .tag{
-  padding: .2rem .55rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.03);
-  font-size: .92rem;
-}
-
-/* Put the dots inside the carousel and pull them up slightly */
-.sec-proof #reviewsCarousel .carousel-indicators{
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -34px;
-  margin: 0;
-}
-
-/* Make the controls feel nicer on top of the card */
-.sec-proof #reviewsCarousel .carousel-control-prev,
-.sec-proof #reviewsCarousel .carousel-control-next{
-  width: 12%;
-}
-
-.sec-proof #reviewsCarousel .carousel-control-prev-icon,
-.sec-proof #reviewsCarousel .carousel-control-next-icon{
-  filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
-  opacity: .95;
-}
-
-/* --------- YouTube grid --------- */
-.sec-proof .yt-grid{
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-}
-
-.sec-proof .yt-card{
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.04);
-  box-shadow: 0 10px 30px rgba(0,0,0,.16);
-}
-
-.sec-proof .yt-embed{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  display: block;
-  border: 0;
-}
-
-.sec-proof .yt-body{
-  padding: 1rem 1.1rem 1.2rem;
-}
-
-.sec-proof .yt-title{
-  font-weight: 800;
-  letter-spacing: .2px;
-}
-
-.sec-proof .yt-sub{
-  margin: .25rem 0 0;
-  opacity: .85;
-  line-height: 1.45;
-}
-
-/* --------- Responsive --------- */
-@media (max-width: 900px){
-  .sec-proof .yt-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 700px){
-  .sec-proof .review-card{
-    grid-template-columns: 1fr;
-  }
-  .sec-proof .thumb img{
-    height: 220px;
-  }
-  .sec-proof #reviewsCarousel .carousel-indicators{
-    bottom: -30px;
-  }
-} 
-    /* Videos */
-    .yt-grid {
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1rem;
-      margin-top: 1.3rem;
-    }
-    .yt-card {
-      grid-column: span 6;
-      border-radius: 18px;
-      overflow:hidden;
-      border: 1px solid rgba(255,255,255,0.10);
-      background: rgba(10,16,22,0.70);
-      box-shadow: 0 18px 60px rgba(0,0,0,0.45);
-      transition: transform 160ms ease, border-color 160ms ease;
-    }
-    .yt-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
-    .yt-embed { width:100%; aspect-ratio: 16/9; border:0; display:block; }
-    .yt-body { padding: 1.05rem 1.15rem 1.1rem; }
-    .yt-title { color:#fff; margin:0 0 0.25rem; font-weight: 900; font-size: 1.05rem; }
-    .yt-sub { color: rgba(255,255,255,0.70); margin:0; line-height: 1.55; font-size: 0.95rem; }
-    @media (max-width: 992px){
-      .yt-card { grid-column: span 12; }
     }
 
     /* FAQ styling */
@@ -577,42 +239,171 @@
     #mini-faq strong { color: #fff !important; }
     #mini-faq .panel-text { color: rgba(255,255,255,0.80) !important; }
 
+    /* Pricing background image */
     #pricing {
-  position: relative;
-  background: 
-    linear-gradient(
-      rgba(10, 15, 25, 0.75), 
-      rgba(10, 15, 25, 0.85)
-    ),
-    url("assets/images/showcase/mountains/15.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* subtle parallax feel */
-  padding: 6rem 0;
-  overflow: hidden;
-}
+      position: relative;
+      background:
+        linear-gradient(
+          rgba(10, 15, 25, 0.75),
+          rgba(10, 15, 25, 0.85)
+        ),
+        url("assets/images/showcase/mountains/15.jpeg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      padding: 6rem 0;
+      overflow: hidden;
+    }
+    #pricing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(2px);
+      z-index: 0;
+    }
+    #pricing .container {
+      position: relative;
+      z-index: 1;
+    }
 
-/* Optional: soften edges with blur glow */
-#pricing::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(2px);
-  z-index: 0;
-}
+    /* --------- Proof section (fixed, single source of truth) --------- */
+    .sec-proof { padding: 5rem 0; }
+    .sec-proof .sec-head { max-width: 900px; margin: 0 auto 2rem; }
+    .sec-proof .sec-head p { max-width: 60ch; margin-bottom: 0.9rem; }
 
-/* Keep content above overlay */
-#pricing .container {
-  position: relative;
-  z-index: 1;
-}
+    .sec-proof .sec-sep{
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,.18), transparent);
+      margin: 3.25rem auto;
+      max-width: 900px;
+    }
+
+    .sec-proof .review-shell{
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 22px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: rgba(10,16,22,0.70);
+      box-shadow: 0 18px 60px rgba(0,0,0,0.45);
+    }
+
+    .sec-proof .review-slide { padding: 1.35rem; }
+
+    .sec-proof .review-card{
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 1.25rem;
+      padding: 1.6rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 30px rgba(0,0,0,.18);
+      align-items: center;
+    }
+
+    .sec-proof .thumb{
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(1,17,26,0.65);
+    }
+
+    .sec-proof .thumb img{
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .sec-proof .quote{
+      margin: 0 0 1rem;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.6;
+      font-size: 1.02rem;
+    }
+
+    .sec-proof .meta{
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+      align-items: center;
+      opacity: .92;
+      color: rgba(255,255,255,0.70);
+      font-size: 0.95rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+    .sec-proof .meta strong { color: rgba(255,255,255,0.95); }
+
+    .sec-proof #reviewsCarousel { position: relative; }
+    .sec-proof #reviewsCarousel .carousel-indicators{
+      position: absolute;
+      left: 0; right: 0;
+      bottom: -34px;
+      margin: 0;
+      gap: 8px;
+    }
+    .sec-proof #reviewsCarousel .carousel-indicators [data-bs-target]{
+      width: 10px; height: 10px;
+      border-radius: 999px;
+      border: 0;
+      opacity: 0.35;
+    }
+    .sec-proof #reviewsCarousel .carousel-indicators .active{ opacity: 0.85; }
+
+    .sec-proof #reviewsCarousel .carousel-control-prev,
+    .sec-proof #reviewsCarousel .carousel-control-next { width: 12%; }
+    .sec-proof #reviewsCarousel .carousel-control-prev-icon,
+    .sec-proof #reviewsCarousel .carousel-control-next-icon{
+      filter: drop-shadow(0 6px 14px rgba(0,0,0,.35));
+      opacity: .95;
+    }
+
+    .sec-proof .yt-grid{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .sec-proof .yt-card{
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 10px 30px rgba(0,0,0,.16);
+    }
+
+    .sec-proof .yt-embed{
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      display: block;
+      border: 0;
+    }
+
+    .sec-proof .yt-body{ padding: 1rem 1.1rem 1.2rem; }
+    .sec-proof .yt-title{ font-weight: 800; letter-spacing: .2px; color:#fff; margin:0; }
+    .sec-proof .yt-sub{ margin: .25rem 0 0; opacity: .85; line-height: 1.45; color: rgba(255,255,255,0.75); }
+
+    @media (max-width: 900px){
+      .sec-proof .yt-grid{ grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px){
+      .sec-proof .review-card{ grid-template-columns: 1fr; }
+      .sec-proof .thumb img{ height: 220px; }
+      .sec-proof #reviewsCarousel .carousel-indicators{ bottom: -30px; }
+    }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER (kept from your code) -->
+<!-- HEADER -->
 <section data-bs-version="5.1" class="menu menu2 cid-tkbL8n4vab" once="menu" id="menu2-16">
   <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
     <div class="container-fluid">
@@ -665,7 +456,7 @@
   </nav>
 </section>
 
-<!-- HERO (kept structure; chips changed to non-links; hero copy tightened slightly) -->
+<!-- HERO -->
 <section data-bs-version="5.1" class="header14 cid-tjqpRpO1sc mbr-fullscreen mbr-parallax-background" id="header14-commissions">
   <div class="mbr-overlay" style="opacity: 0.82; background-color: rgb(1, 17, 26);"></div>
 
@@ -686,7 +477,7 @@
             I create handcrafted Minecraft survival worlds designed for long-term play,
             meaningful exploration, and natural progression.
             <br><br>
-            You’ll get clear pricing, frequent progress updates, and a world that plays well from spawn to end game. 
+            You’ll get clear pricing, frequent progress updates, and a world that plays well from spawn to end game.
             Not just something that looks good on screenshots.
           </p>
 
@@ -699,10 +490,6 @@
     </div>
   </div>
 </section>
-
-
-
-
 
 <section class="sec" id="trust">
   <div class="container wrap">
@@ -745,7 +532,6 @@
   </div>
 </section>
 
-
 <section
   data-bs-version="5.1"
   class="info1 cid-tjqN7jdkCu"
@@ -767,7 +553,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="sec" id="pricing">
   <div class="container wrap">
@@ -887,14 +672,8 @@
   </div>
 </section>
 
-<!-- ===== PROOF (REVIEWS + COLLABS) ===== -->
-<section data-bs-version="5.1" id="proof">
-  <div class="container proof-wrap">
-
-    <div class="proof-head">
-      <h2>Proof of Work</h2>
-      <p>Client reviews + videos made on commissioned worlds.</p>
-<section class="sec" id="proof">
+<!-- ===== PROOF (FIXED) ===== -->
+<section class="sec sec-proof" id="proof">
   <div class="container wrap">
     <div class="sec-head">
       <h2>Proof</h2>
@@ -902,28 +681,12 @@
       <div class="divider"></div>
     </div>
 
-    <!-- Reviews Carousel -->
-    <div id="reviewsCarousel" class="carousel slide review-carousel review-controls" data-bs-ride="carousel" data-bs-interval="6500" data-bs-touch="true">
-      <div class="carousel-inner">
+    <!-- Reviews -->
     <div class="review-shell">
-      <div id="reviewsCarousel" class="carousel slide review-controls" data-bs-ride="carousel" data-bs-interval="6500" data-bs-touch="true">
-        <div class="carousel-inner">
+      <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6500" data-bs-touch="true">
 
-        <!-- Slide 1 -->
-        <div class="carousel-item active">
-          <div class="review-slide">
-            <div class="review-card">
-              <div class="review-thumb">
-                <img src="assets/images/Reviews/RLW.png" alt="Commission map preview">
-              </div>
-              <div>
-                <p class="review-quote">
-                  “beautiful layout I love the mix of snow in the rivers in and the terrain is colourful and the small structures bring a smile
-                  If you want someone that can make you a amazing world I recommend @Zhyrr”
-                </p>
-                <div class="review-meta">
-                  <span><strong>RLW</strong></span>
-                  <span>Server</span>
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
           <div class="carousel-item active">
             <div class="review-slide">
               <div class="review-card">
@@ -943,22 +706,8 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Slide 2 -->
-        <div class="carousel-item">
-          <div class="review-slide">
-            <div class="review-card">
-              <div class="review-thumb">
-                <img src="assets/images/Reviews/Chernaya.png" alt="Commission map preview">
-              </div>
-              <div>
-                <p class="review-quote">
-                  “Zhyrr delivered an exceptional 9kx6k fantasy map, combining professionalism, creativity, and meticulous attention to detail while continuously improving and refining the project throughout the commission. He fully immersed himself in our vision, handled extensive feedback with ease, and consistently went above and beyond expectations. I wholeheartedly recommend him to anyone seeking a large, detailed, and high-quality custom map. Worth every moment of the wait. ⭐⭐⭐⭐⭐”
-                </p>
-                <div class="review-meta">
-                  <span><strong>Chernaya</strong></span>
-                  <span>Server</span>
+          <!-- Slide 2 -->
           <div class="carousel-item">
             <div class="review-slide">
               <div class="review-card">
@@ -977,24 +726,8 @@
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- Slide 3 -->
-        <div class="carousel-item">
-          <div class="review-slide">
-            <div class="review-card">
-              <div class="review-thumb">
-                <img src="assets/images/Reviews/Antoine.png" alt="Commission map preview">
-              </div>
-              <div>
-                <p class="review-quote">
-                  “I had a very good exchange with Zhyrr. Very pleasant and enthusiastic.
-                  The deadline is more than fast. Honestly, I compared with many other freelancers before working with Zhyrr, and I think there is no better value for money for time (whatever you want).
-                  The player's immersion is more than successful. 🤩 All the seabeds are detailed. THANKS again. 😄”
-                </p>
-                <div class="review-meta">
-                  <span><strong>Antoine</strong></span>
-                  <span>Minecraft Marketplace</span>
+          <!-- Slide 3 -->
           <div class="carousel-item">
             <div class="review-slide">
               <div class="review-card">
@@ -1015,42 +748,31 @@
               </div>
             </div>
           </div>
-
         </div>
 
+        <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Previous review">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Next review">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
-      </div>
 
-      <!-- Prev/Next -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Previous review">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next" aria-label="Next review">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </button>
-    </div>
+        <!-- Dots -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Review 2"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Review 3"></button>
+        </div>
 
-    <!-- Dots -->
-    <div class="review-dots">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
-@@ -897,15 +855,15 @@ <h2>Proof of Work</h2>
       </div>
     </div>
+
+    <div class="sec-sep"></div>
 
     <!-- Collaborations -->
-    <div style="height: 2.25rem;"></div>
-    <div class="proof-head" style="margin-bottom: 1.2rem;">
-    <div style="height: 2.3rem;"></div>
-
     <div class="sec-head" style="margin-bottom: 1.2rem;">
       <h2>Collaborations</h2>
-      <p>Videos made on commissioned worlds. (More collaborations coming!)</p>
       <p>Videos made on commissioned worlds. More coming.</p>
       <div class="divider"></div>
     </div>
@@ -1060,7 +782,10 @@
       <div class="yt-card">
         <iframe class="yt-embed"
           src="https://www.youtube.com/embed/SZn-qQGLhdM?start=3523"
-@@ -918,7 +876,6 @@ <h2>Collaborations</h2>
+          title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="yt-body">
+          <h5 class="yt-title">Commissioned World Showcase</h5>
+          <p class="yt-sub">Recorded on a commissioned survival world.</p>
         </div>
       </div>
 
@@ -1068,7 +793,11 @@
       <div class="yt-card">
         <iframe class="yt-embed"
           src="https://www.youtube.com/embed/2FE7pOBbRn8"
-@@ -932,14 +889,19 @@ <h2>Collaborations</h2>
+          title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="yt-body">
+          <h5 class="yt-title">Commissioned World Gameplay</h5>
+          <p class="yt-sub">Another series recorded on a commissioned world.</p>
+        </div>
       </div>
     </div>
 
@@ -1080,6 +809,7 @@
   </div>
 </section>
 
+<!-- FAQ -->
 <section data-bs-version="5.1" class="content16 cid-tjqfD1HjQw" id="mini-faq">
   <div class="container">
     <div class="row justify-content-center">
@@ -1163,7 +893,8 @@
   </div>
 </section>
 
-<section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-commissions">
+<!-- CTA -->
+<section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-commissions-ready">
   <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(1, 17, 26);"></div>
   <div class="align-center container">
     <div class="row justify-content-center">
@@ -1184,7 +915,7 @@
   </div>
 </section>
 
-<!-- FOOTER (kept from your code) -->
+<!-- FOOTER -->
 <section data-bs-version="5.1" class="footer1 cid-tkbGMWG3Nn" once="footer" id="footer01-commissions">
   <div class="container">
     <div class="row justify-content-center">
