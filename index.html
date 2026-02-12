@@ -547,6 +547,64 @@
   margin-top: 0.45rem;
   flex: 0 0 auto;
 }
+
+/* ===== VIDEO HERO SECTION ===== */
+
+.video-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background video container */
+.video-background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 177.77vh; /* 16:9 ratio */
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Make iframe fill container */
+.video-background iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* Overlay styling */
+.video-hero .mbr-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(1, 17, 26, 0.8); /* Your dark blue tone */
+    z-index: 1;
+}
+
+/* Keep content above video */
+.video-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Improve mobile scaling */
+@media (max-aspect-ratio: 16/9) {
+    .video-background {
+        width: 100vw;
+        height: 56.25vw; /* 16:9 */
+    }
+}
+
+/* Optional: Smooth fade-in effect */
+.video-hero {
+    animation: fadeInHero 1.5s ease-in-out;
+}
+
+@keyframes fadeInHero {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 </style>
 
 
@@ -606,9 +664,20 @@
   </nav>
 </section>
 
-<section data-bs-version="5.1" class="header14 cid-tjqpRpO1sc mbr-fullscreen mbr-parallax-background" id="header14-d">
+<section data-bs-version="5.1" class="header14 cid-tjqpRpO1sc mbr-fullscreen video-hero" id="header14-d">
 
-    <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(1, 17, 26);"></div>
+    <!-- Video Background -->
+    <div class="video-background">
+        <iframe
+            src="https://www.youtube.com/embed/0gyIK0EzTVk?start=55&end=70&autoplay=1&mute=1&controls=0&loop=1&playlist=0gyIK0EzTVk&modestbranding=1&rel=0"
+            frameborder="0"
+            allow="autoplay; fullscreen"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Dark Overlay -->
+    <div class="mbr-overlay"></div>
 
     <div class="container">
         <div class="row justify-content-center align-items-center">
@@ -618,27 +687,36 @@
             <div class="col-12 col-md">
                 <div class="text-wrapper">
                     <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1">
-                    <strong>Hi, I’m Zhyrr!</strong>
+                        <strong>Hi, I’m Zhyrr!</strong>
                     </h1>
 
                     <p class="mbr-text mbr-fonts-style display-7">
-                      Most survival worlds get boring fast. <strong>This one doesn’t.</strong> Every <strong>mountain, valley, and ruin</strong> is placed with intention in mind! Specifically designed to <strong>pull you deeper the longer you play.</strong> If you want a world that actually <strong>challenges you to explore and survive</strong>, download it and see how far you get.
-                      <br><br>
-                      <strong>Join the Discord</strong> to help shape what comes next, suggest ideas, and <strong>influence future worlds.</strong> And if you want something made <strong>specifically for you</strong>, I also take commissions for <strong>custom Minecraft worlds</strong> and special requests.
-                     </p>
+                        Most survival worlds get boring fast. <strong>This one doesn’t.</strong>
+                        Every <strong>mountain, valley, and ruin</strong> is placed with intention in mind!
+                        Specifically designed to <strong>pull you deeper the longer you play.</strong>
+                        If you want a world that actually <strong>challenges you to explore and survive</strong>,
+                        download it and see how far you get.
+                        <br><br>
+                        <strong>Join the Discord</strong> to help shape what comes next, suggest ideas,
+                        and <strong>influence future worlds.</strong> And if you want something made
+                        <strong>specifically for you</strong>, I also take commissions for
+                        <strong>custom Minecraft worlds</strong> and special requests.
+                    </p>
 
                     <div class="mbr-section-btn mt-3">
                         <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">
                             Join the Discord
                         </a>
                         <a class="btn btn-info-outline display-4" href="https://www.patreon.com/ZhyrrDesigns" target="_blank">
-                            Play my Worlds &gt;
+                            Play my Worlds >
                         </a>
                     </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <section data-bs-version="5.1" class="features12 cid-tjqffd3dFI" id="features13-2">
 
