@@ -103,7 +103,7 @@
     }
     .card-pad { padding: 2.2rem 2.3rem; }
     @media (max-width: 768px){
-      .card-pad { padding: 1.7rem 1.4rem; }
+      .card-pad { padding: 1.7rem 1.2rem; }
     }
 
     /* Section headings */
@@ -150,15 +150,22 @@
       .stat { grid-column: span 12; }
     }
 
-    /* Pricing layout */
-    .pricing-grid {
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
+    /* =========================
+       PRICING (MOBILE FIXED)
+       ========================= */
+
+    /* Remove the accidental override at the bottom from your old file
+       (it forced .pricing-grid to flex always and breaks wrapping). */
+    .pricing-grid{
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
       gap: 1rem;
       align-items: stretch;
     }
-    .price-card {
+
+    .price-card{
       grid-column: span 4;
+      min-width: 0; /* important: prevents overflow in grid/flex contexts */
       border-radius: 18px;
       background: rgba(255,255,255,0.06);
       border: 1px solid rgba(255,255,255,0.10);
@@ -166,12 +173,13 @@
       height: 100%;
       transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
     }
-    .price-card:hover {
+    .price-card:hover{
       transform: translateY(-4px);
       border-color: rgba(255,255,255,0.18);
       background: rgba(255,255,255,0.08);
     }
-    .price-card .tag {
+
+    .price-card .tag{
       display:inline-flex;
       padding: 0.35rem 0.7rem;
       border-radius: 999px;
@@ -183,36 +191,65 @@
     }
     .price-card h5 { margin: 0.8rem 0 0.25rem; color:#fff; font-weight: 900; }
     .price-card .p { color: rgba(255,255,255,0.76); line-height: 1.65; margin: 0; }
-    .price {
+
+    .price{
       margin-top: 0.9rem;
       font-size: 1.65rem;
       font-weight: 900;
       color: #fff;
       letter-spacing: 0.2px;
+      word-break: keep-all;
     }
     .price small { font-size: 0.95rem; color: rgba(255,255,255,0.70); font-weight: 700; }
 
-    .price-table {
+    /* On medium screens, stack to 2 per row */
+    @media (max-width: 992px){
+      .price-card { grid-column: span 6; }
+    }
+    /* On mobile, stack to 1 per row */
+    @media (max-width: 576px){
+      .price-card { grid-column: span 12; }
+      .price-card { padding: 1.15rem 1.1rem 1.05rem; }
+    }
+
+    /* Price table: make it mobile-safe and prevent overflow */
+    .price-table{
       margin-top: 1.3rem;
       border-radius: 18px;
-      overflow:hidden;
+      overflow: hidden;
       border: 1px solid rgba(255,255,255,0.10);
       background: rgba(10,16,22,0.65);
     }
-    .price-row {
+
+    .price-row{
       display:flex;
       justify-content: space-between;
       gap: 1rem;
       padding: 0.85rem 1.1rem;
       border-bottom: 1px solid rgba(255,255,255,0.08);
       align-items: baseline;
+      min-width: 0;
     }
-    .price-row:last-child { border-bottom: 0; }
+    .price-row:last-child{ border-bottom: 0; }
+
     .price-row .l { color: rgba(255,255,255,0.92); font-weight: 900; }
     .price-row .s { color: rgba(255,255,255,0.65); font-size: 0.92rem; margin-top: 0.15rem; }
     .price-row .r { color:#fff; font-weight: 900; white-space: nowrap; }
 
-    .pricing-notes {
+    /* Mobile: stack the row so it never squishes or overflows */
+    @media (max-width: 576px){
+      .price-row{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+        padding: 0.8rem 0.95rem;
+      }
+      .price-row .r{
+        align-self: flex-start;
+      }
+    }
+
+    .pricing-notes{
       margin-top: 1.2rem;
       padding-top: 1.1rem;
       border-top: 1px solid rgba(255,255,255,0.10);
@@ -226,10 +263,6 @@
       margin-top: 0.45rem; flex: 0 0 auto;
     }
 
-    @media (max-width: 992px){
-      .price-card { grid-column: span 12; }
-    }
-
     /* FAQ styling */
     #mini-faq { background-color: rgb(1, 17, 26); padding: 4.8rem 0; }
     #mini-faq .card { background: rgba(10,16,22,0.70); border: 1px solid rgba(255,255,255,0.10); }
@@ -240,13 +273,10 @@
     #mini-faq .panel-text { color: rgba(255,255,255,0.80) !important; }
 
     /* Pricing background image */
-    #pricing {
+    #pricing{
       position: relative;
       background:
-        linear-gradient(
-          rgba(10, 15, 25, 0.75),
-          rgba(10, 15, 25, 0.85)
-        ),
+        linear-gradient(rgba(10, 15, 25, 0.75), rgba(10, 15, 25, 0.85)),
         url("assets/images/showcase/mountains/15.jpeg");
       background-size: cover;
       background-position: center;
@@ -255,17 +285,18 @@
       padding: 6rem 0;
       overflow: hidden;
     }
-    #pricing::before {
+    @media (max-width: 992px){
+      /* iOS/Android: fixed backgrounds can be janky, this improves mobile */
+      #pricing{ background-attachment: scroll; }
+    }
+    #pricing::before{
       content: "";
       position: absolute;
       inset: 0;
       backdrop-filter: blur(2px);
       z-index: 0;
     }
-    #pricing .container {
-      position: relative;
-      z-index: 1;
-    }
+    #pricing .container{ position: relative; z-index: 1; }
 
     /* --------- Proof section (fixed, single source of truth) --------- */
     .sec-proof { padding: 5rem 0; }
@@ -398,11 +429,6 @@
       .sec-proof .thumb img{ height: 220px; }
       .sec-proof #reviewsCarousel .carousel-indicators{ bottom: -30px; }
     }
-
-    .pricing-grid {
-  display: flex;          /* or grid if you're using grid */
-  gap: 20px;              /* space between items */
-}
   </style>
 </head>
 
@@ -478,21 +504,18 @@
           </h1>
 
           <p class="mbr-text mbr-fonts-style display-7 hero-sub">
-  Want a world made specifically for <strong>your server, SMP, or friend group</strong>?
-  I create <strong>handcrafted Minecraft survival worlds</strong> designed for 
-  <strong>long-term play</strong>, meaningful exploration, and natural progression.
-  <br><br>
-  You’ll get <strong>clear pricing</strong>, <strong>frequent progress updates</strong>, 
-  and a world that <strong>plays well from spawn to end game</strong>.
-  <strong>Not just something that looks good on screenshots.</strong>
-</p>
+            Want a world made specifically for <strong>your server, SMP, or friend group</strong>?
+            I create <strong>handcrafted Minecraft survival worlds</strong> designed for
+            <strong>long-term play</strong>, meaningful exploration, and natural progression.
+            <br><br>
+            You’ll get <strong>clear pricing</strong>, <strong>frequent progress updates</strong>,
+            and a world that <strong>plays well from spawn to end game</strong>.
+            <strong>Not just something that looks good on screenshots.</strong>
+          </p>
 
           <div class="mbr-section-btn mt-3">
             <a class="btn btn-primary display-4" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Join Discord</a>
-            <a class="btn btn-secondary display-4" 
-                   href="commission.html">
-                   Commission Me
-                </a>
+            <a class="btn btn-secondary display-4" href="commission.html">Commission Me</a>
           </div>
         </div>
       </div>
@@ -523,7 +546,6 @@
           <div class="t">Clean handoff, final preview, and small finishing tweaks after you test.</div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -673,18 +695,14 @@
   <div class="container wrap">
     <div class="sec-head">
       <h2>Reviews</h2>
-      <p class="text-center">
-  Client reviews and videos recorded on commissioned worlds.
-</p>
+      <p class="text-center">Client reviews and videos recorded on commissioned worlds.</p>
       <div class="divider"></div>
     </div>
 
-    <!-- Reviews -->
     <div class="review-shell">
       <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6500" data-bs-touch="true">
-
         <div class="carousel-inner">
-          <!-- Slide 1 -->
+
           <div class="carousel-item active">
             <div class="review-slide">
               <div class="review-card">
@@ -705,7 +723,6 @@
             </div>
           </div>
 
-          <!-- Slide 2 -->
           <div class="carousel-item">
             <div class="review-slide">
               <div class="review-card">
@@ -725,7 +742,6 @@
             </div>
           </div>
 
-          <!-- Slide 3 -->
           <div class="carousel-item">
             <div class="review-slide">
               <div class="review-card">
@@ -746,9 +762,30 @@
               </div>
             </div>
           </div>
+
+          <div class="carousel-item">
+            <div class="review-slide">
+              <div class="review-card">
+                <div class="thumb">
+                  <img src="assets/images/Reviews/Mulcho_1-Done.png" alt="Commission map preview">
+                </div>
+                <div>
+                  <p class="quote">
+                    “I'm following Zhyrr's work as a terrain artist since 2020 and saw him improve year by year. Naturally when the time came to commission a world for my own work he was my first pick. The process was smooth and transparent. After an initial layout suggestion we went through a couple of small revisions to nail down the details and a few days later I got my world ready to go. 
+
+                      Very pleased with the result, Zhyrr manages to create landscapes that are both impressive to look at from a distance and filled with details when up close on a player scale. Highly recommended.”
+                  </p>
+                  <div class="meta">
+                    <span><strong>Mulcho</strong></span>
+                    <span>Showcase Work</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Controls -->
         <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev" aria-label="Previous review">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         </button>
@@ -756,7 +793,6 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
         </button>
 
-        <!-- Dots -->
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Review 1"></button>
           <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Review 2"></button>
@@ -768,17 +804,13 @@
 
     <div class="sec-sep"></div>
 
-    <!-- Collaborations -->
     <div class="sec-head" style="margin-bottom: 1.2rem;">
       <h2>Collaborations</h2>
-      <p class="text-center">
-  Videos made on commissioned worlds. More coming.
-</p>
+      <p class="text-center">Videos made on commissioned worlds. More coming.</p>
       <div class="divider"></div>
     </div>
 
     <div class="yt-grid">
-      <!-- Video 1 -->
       <div class="yt-card">
         <iframe class="yt-embed"
           src="https://www.youtube.com/embed/SZn-qQGLhdM?start=3523"
@@ -789,7 +821,6 @@
         </div>
       </div>
 
-      <!-- Video 2 -->
       <div class="yt-card">
         <iframe class="yt-embed"
           src="https://www.youtube.com/embed/2FE7pOBbRn8"
@@ -880,7 +911,7 @@
               </div>
             </div>
           </div>
-
+            
         </div>
 
       </div>
@@ -888,32 +919,24 @@
   </div>
 </section>
 
-<!-- ===== DISCORD CTA (re-uses your existing style) ===== -->
+<!-- ===== DISCORD CTA ===== -->
 <section data-bs-version="5.1" class="info1 cid-tjqN7jdkCu" id="info1-portfolio">
   <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(1, 17, 26);"></div>
   <div class="align-center container">
-      <div class="row justify-content-center">
-          <div class="col-12 col-lg-8">
-              <h3 class="mbr-section-title mb-4 mbr-fonts-style display-1">
-                  <strong>Ready to start?</strong>
-              </h3>
-              <p class="mbr-text mbr-fonts-style display-7" style="color: rgba(255,255,255,0.78);">
-                Get in contact and we will bring your ideas to life!
-              </p>
-              <div class="mbr-section-btn">
-                <a class="btn btn-primary display-4 me-3" 
-                   href="https://discord.com/invite/Tzx7FKKe5R" 
-                   target="_blank">
-                   Discord Server
-                </a>
-
-                <a class="btn btn-secondary display-4" 
-                   href="commission.html">
-                   Commission Me
-                </a>
-              </div>
-          </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8">
+        <h3 class="mbr-section-title mb-4 mbr-fonts-style display-1">
+          <strong>Ready to start?</strong>
+        </h3>
+        <p class="mbr-text mbr-fonts-style display-7" style="color: rgba(255,255,255,0.78);">
+          Get in contact and we will bring your ideas to life!
+        </p>
+        <div class="mbr-section-btn">
+          <a class="btn btn-primary display-4 me-3" href="https://discord.com/invite/Tzx7FKKe5R" target="_blank">Discord Server</a>
+          <a class="btn btn-secondary display-4" href="commission.html">Commission Me</a>
+        </div>
       </div>
+    </div>
   </div>
 </section>
 
